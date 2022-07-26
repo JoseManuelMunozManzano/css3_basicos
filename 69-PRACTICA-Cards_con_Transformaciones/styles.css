@@ -1,0 +1,52 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #30bfa5;
+}
+
+.box {
+  position: relative;
+  width: 360px;
+  height: 640px;
+  margin: 0 auto;
+
+  transform: rotate(-30deg) skew(25deg) scale(0.6);
+}
+
+.layer {
+  /* Son 4 layers y así quedan uno detrás de otro */
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 100%;
+
+  background: #222;
+
+  transition: all 0.5s;
+}
+
+.box:hover .layer:nth-child(4) {
+  transform: translate(160px, -160px);
+  opacity: 1;
+}
+
+.box:hover .layer:nth-child(3) {
+  transform: translate(120px, -120px);
+  opacity: 0.8;
+}
+
+.box:hover .layer:nth-child(2) {
+  transform: translate(80px, -80px);
+  opacity: 0.6;
+}
+
+.box:hover .layer:nth-child(1) {
+  transform: translate(40px, -40px);
+  opacity: 0.4;
+}

@@ -1,0 +1,26 @@
+/* Desbordamiento */
+
+#desbordamiento {
+  width: 250px;
+  height: 250px;
+  background-color: #ffdb39;
+  padding: 20px;
+
+  /* Desbordamiento porque el tamaño del contenedor es fijo */
+  /* Con overflow controlamos el desbordamiento */
+
+  /* El desbordamiento no se visualiza */
+  overflow: hidden;
+
+  /* Se ve el desbordamiento */
+  overflow: visible;
+
+  /* Se genera una barra de scroll, pero tiene el problema de que la
+  barra de scroll aparece aunque el texto no se desborde */
+  overflow: scroll;
+
+  /* Se genera una barra de scroll solo cuando el texto se desborda.
+  Si el texto se acopla bien, entonces no aparecen barras de scroll */
+  /* Este es el valor que se debe de utilizar con contenido dinámico */
+  overflow: auto;
+}

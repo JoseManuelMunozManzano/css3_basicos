@@ -1,0 +1,22 @@
+/* Sombra vs drop-shadow */
+
+/* Cual es la diferencia entre sombra y drop-shadow() */
+
+body {
+  background: #187ef3;
+  text-align: center;
+}
+
+img {
+  margin: 100px 20px;
+}
+
+/* box-shadow aplica la sombra al border del contenedor */
+.logo {
+  box-shadow: 0 0 15px 10px #fff;
+}
+
+/* drop-shadow le aplica la sombra a la imagen */
+.logo2 {
+  filter: drop-shadow(0 0 15px #fff);
+}

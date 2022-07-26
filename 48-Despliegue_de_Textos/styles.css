@@ -1,0 +1,15 @@
+/* Despliegue de textos */
+
+p {
+  margin: 0;
+}
+
+/* Despliegue en forma de columnas */
+#despliegue {
+  /* Número de columnas que quiero que tenga */
+  column-count: 3;
+  /* Separación entre columnas */
+  column-gap: 50px;
+  /* Línea divisoria que tiene cada una de las columnas */
+  column-rule: 2px solid blue;
+}

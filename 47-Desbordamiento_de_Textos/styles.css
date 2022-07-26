@@ -1,0 +1,36 @@
+/* Desbordamiento de textos */
+
+h1 {
+  width: 300px;
+
+  /* PRIMERA FORMA */
+  /* La forma más recomendada */
+  /* Permite controlar como es el espacio en blanco de este texto */
+  /* Solo se aplica a la primera línea */
+
+  /* 1. El texto se coloca en una línea. No hace wrap y el texto desborda
+   el contenedor. */
+  white-space: nowrap;
+  /* 2. Indicamos que el texto no se muestra  */
+  overflow: hidden;
+  /* 3. Se indica el tipo de desbordamiento del texto. En este caso ... */
+  text-overflow: ellipsis;
+}
+
+h2 {
+  width: 300px;
+
+  /* SEGUNDA FORMA */
+  /* Más experimental, no la soportan todos los navegadores.
+  Permite indicarle cuantas líneas quiero que aparezcan */
+
+  /* 1. Se despliega el contenido como una caja */
+  display: -webkit-box;
+  /* 2. Como quiero que se despliegue el texto, su orientación */
+  -webkit-box-orient: vertical;
+  /* 3. El número de filas que quiero que tenga ese texto.
+  En este caso, en la cuarta fila coloca puntos suspensivos */
+  -webkit-line-clamp: 4;
+  /* 4. Indico que el resto del texto, tras los puntos suspensivos, se oculte */
+  overflow: hidden;
+}

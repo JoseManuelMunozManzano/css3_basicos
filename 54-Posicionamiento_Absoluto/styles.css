@@ -1,0 +1,27 @@
+/* Posicionamiento absoluto */
+/* Se indica la ubicación del elemento de forma específica */
+/* Ignora la posición del contenedor padre */
+
+/* La forma correcta de utilizar el posicionamiento absoluto es primero indicando */
+/* que su contenedor padre tenga un posicionamiento relativo. */
+/* Esto es así para que el elemento hijo se coloque donde yo quiera, pero dentro del contenedor padre, en base a su padre. */
+
+.contenedor {
+  width: 600px;
+  height: 600px;
+  margin: auto;
+  background: #979797;
+
+  position: relative;
+}
+
+div.box {
+  background: violet;
+  width: 200px;
+  height: 200px;
+  margin: 20px;
+
+  position: absolute;
+  top: 0;
+  right: 50px; /* Se separa 50px de la derecha */
+}

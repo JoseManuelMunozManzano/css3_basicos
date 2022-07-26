@@ -1,0 +1,22 @@
+/* Origen de la transformación (transform-origin) */
+
+/* El origen de la transformación es la posición o el punto de origen de inicio en el que se va a realizar esa transformación */
+
+.shape {
+  background: #0aec42;
+  width: 150px;
+  height: 150px;
+  margin: 100px auto;
+  transition: all 2s;
+}
+
+.shape:hover {
+  transform: rotate(360deg);
+}
+
+.s2 {
+  background: #e6810f;
+
+  /* En este caso, como el transform es rotate, indicamos desde donde se va a empezar a rotar: desde la izquierda */
+  transform-origin: left;
+}

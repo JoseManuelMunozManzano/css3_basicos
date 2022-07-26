@@ -1,0 +1,31 @@
+/* Background Blend Mode */
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+div {
+  width: 100vw;
+  height: 100vh;
+  background: url(../img/background1.jpg), url(../img/background2.jpg), yellow;
+  background-size: cover;
+  background-position: center;
+
+  /* BLEND MODE */
+  /* Carga imágenes y las combina */
+  background-blend-mode: multiply;
+
+  /*
+    -multiply
+    -screen
+    -overlay
+    -darken
+    -lighten
+    -color-dodge
+    -saturation
+    -color
+    -luminosity
+    -hue
+  */
+}

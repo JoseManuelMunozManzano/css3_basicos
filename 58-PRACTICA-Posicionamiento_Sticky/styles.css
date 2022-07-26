@@ -1,0 +1,44 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  width: 100%;
+  position: relative;
+}
+
+section {
+  width: 100%;
+
+  /* El position: sticky necesita un alto para poder funcionar */
+  height: 100vh;
+
+  position: sticky;
+  top: 0;
+
+  /* Se añade el !important porque como no es específico, no se va a aplicar sin el */
+  background-size: cover !important;
+  background-position: center center !important;
+}
+
+section:nth-child(1) {
+  background: url(../img/background1.jpg);
+}
+
+section:nth-child(2) {
+  background: url(../img/background2.jpg);
+}
+
+section:nth-child(3) {
+  background: url(../img/background3.jpg);
+}
+
+section:nth-child(4) {
+  background: url(../img/background4.jpg);
+}
+
+section:nth-child(5) {
+  background: url(../img/background5.jpg);
+}

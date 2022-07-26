@@ -1,0 +1,12 @@
+/* Selectores agrupados - separados por comas */
+h1,
+p,
+a {
+  color: blue;
+}
+
+h1,
+.elemento1,
+.elemento2 {
+  font-size: 40px;
+}

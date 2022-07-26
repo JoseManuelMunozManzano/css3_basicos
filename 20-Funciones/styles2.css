@@ -1,0 +1,11 @@
+/* Funciones */
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/* Se pueden agregar valores de atributos con un :before (o :after) y la función attr() aplicada a content */
+h1:after {
+  content: attr(data-name);
+}

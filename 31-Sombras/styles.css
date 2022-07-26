@@ -1,0 +1,26 @@
+/* Sombras */
+
+div {
+  width: 300px;
+  height: 300px;
+  background-color: gray;
+  margin: 50px auto;
+
+  /* SOMBRAS */
+  /* Los primeros 4 valores son numéricos y el quinto es un color */
+  /* Primer valor: sombra en el eje X a la derecha si es positivo o a la izquierda si es negativo */
+  /* Segundo valor: sombra en el eje Y abajo si es positivo o arriba si es negativo */
+  /* Tercer valor: difuminado */
+  /* Cuarto valor: tamaño del cuadro del elemento de sombra. No se utiliza mucho y se puede omitir */
+  /* Quinto valor: color de la sombra */
+  box-shadow: 10px 10px 10px 30px #000;
+
+  /* SOMBRAS MULTIPLES */
+  /* Se pueden concatenar sombras separadas por coma */
+  box-shadow: 2px 2px 5px 5px #aaa, 6px 6px 5px 10px #777, 12px 12px 5px 20px #444;
+}
+
+h1 {
+  /* Aplicar sombra a texto */
+  text-shadow: 5px 0 5px #000;
+}

@@ -1,0 +1,17 @@
+/* Bordes con imágenes */
+/* No se usa mucho */
+
+div {
+  width: 200px;
+  height: 200px;
+  border: 42px solid black;
+
+  /* tamaño de ancho a ese border */
+  border-image-width: 1;
+  /* url de la imagen */
+  border-image-source: url(../img/background1.jpg);
+  /* tamaño de la imagen en el borde */
+  border-image-slice: 10%;
+  /* como se va a repetir la imagen */
+  border-image-repeat: stretch;
+}

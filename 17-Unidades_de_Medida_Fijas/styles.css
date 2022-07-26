@@ -1,0 +1,32 @@
+/* Unidades de medida fija */
+div {
+  background: blue;
+
+  /* Quarto de mm */
+  width: 20Q;
+  height: 20Q;
+
+  /* Pixeles - La más popular de las unidades fijas */
+  width: 50px;
+  height: 50px;
+
+  /* Puntos */
+  width: 50pt;
+  height: 50pt;
+
+  /* Milimetros */
+  width: 50mm;
+  height: 50mm;
+
+  /* Picas */
+  width: 50pc;
+  height: 50pc;
+
+  /* Centimetros */
+  width: 50cm;
+  height: 50cm;
+
+  /* Pulgadas */
+  width: 50in;
+  height: 50in;
+}

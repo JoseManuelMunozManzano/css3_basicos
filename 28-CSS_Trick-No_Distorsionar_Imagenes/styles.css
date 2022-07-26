@@ -1,0 +1,22 @@
+/* Acoplar imágenes a contenedores */
+div {
+  width: 200px;
+  height: 200px;
+  border: 3px solid black;
+  margin: 100px auto;
+}
+
+img {
+  width: 100%;
+  /* El alto aplica el 100% sobre el alto del padre, es decir 200px */
+  height: 100%;
+
+  /* Para trabajar con etiqueta img dentro de un contenedor */
+  /* Sin la propiedad object-fit la imagen queda distorsionada. No se adapta al contenedor */
+  /* Con object-fit: cover la imagen se adapta al contenedor. Queda bien acoplada */
+  object-fit: cover;
+  /* Con object-position podemos indicar como queremos que se ubique */
+  object-position: left top;
+
+  /* Estas dos propiedades son similares a background-fit y background-position */
+}

@@ -1,0 +1,36 @@
+/* Centrar un div */
+/* Así se centraba cuando no había flexbox ni grid layout */
+/* Se han quedado un poco desfasadas */
+
+div {
+  position: relative;
+  background: crimson;
+  color: #fff;
+  width: 500px;
+  height: 500px;
+
+  /* TERCERA FORMA DE CENTRAR */
+  /* Para centrar el elemento de forma horizontal */
+  /* Solo funciona para elementos con display inline o que tengan un tamaño establecido */
+  margin: auto;
+}
+
+h1 {
+  /* PRIMERA FORMA DE CENTRAR - Aplica para 1 línea de texto */
+  /* En line-height se indica el mismo height que ocupa el div */
+  /* text-align: center;
+  line-height: 500px;  */
+
+  /* SEGUNDA FORMA DE CENTRAR - MAS UTILIZADA */
+  /* El contenedor principal tiene que tener la propiedad position: relative */
+  /* Yo he añadido el margin a 0, porque no me parecía centrado */
+  /* margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); */
+
+  /* TERCERA FORMA DE CENTRAR */
+  width: 50px;
+  margin: auto;
+}

@@ -1,0 +1,8 @@
+/* Prefijos de navegador (o vendedor) */
+div {
+  transform: rotate(25deg);
+  -webkit-transform: rotate(25deg); /* Versiones antiguas de Chrome (Motor WebKit) */
+  -moz-transform: rotate(25deg); /* Versiones antiguas de Firefox (Motor Gecko) */
+  -ms-transform: rotate(25deg); /* Versiones antiguas de IE (Motor Trident) */
+  -o-transform: rotate(25deg); /* Versiones antiguas de Opera (Motor Presto) */
+}

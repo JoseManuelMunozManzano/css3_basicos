@@ -1,0 +1,23 @@
+/* Herencia CSS */
+
+body {
+  /* El color ha sido heredado por los elementos p */
+  color: red;
+  /* En principio el border no ha sido heredado por el hijo div */
+  border: 1px solid blue;
+}
+
+/*   inherit	Hereda el valor que tiene la misma propiedad CSS en su elemento padre.
+      initial	Establece el valor inicial que tenía la propiedad CSS inicialmente.
+*/
+
+/* Para heredar el border del padre se usa inherit */
+/* div {
+  border: inherit;
+} */
+
+div {
+  /* Establece el valor inicial de la propiedad border */
+  /* consistente en que no hereda el borde */
+  border: initial;
+}

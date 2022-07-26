@@ -1,0 +1,60 @@
+/* Animaciones */
+
+/* PASO 1 - PROPIEDADES DE ANIMACION */
+/* Se aplican al elemento que queremos que se anime */
+/*
+		- animation-name	            -- Nombre a la animacion (obligatoria)
+		- animation-duration	        -- Duracion
+		- animation-timing-function	  -- Velocidad del movimiento
+		- animation-delay             -- Retraso
+		- animation-iteration-count	  -- Cantidad de veces que se repite
+		- animation-direction	        -- Direccion 
+		- animation-fill-mode	        -- Qué mostrará cuando termine
+		- animation-play-state        -- Estado de reproduccion (running/paused)
+		*/
+
+div {
+  width: 200px;
+  height: 200px;
+  background: gray;
+  margin: 50px 0;
+
+  /* Propiedades de mi animación */
+  animation-name: changeColor;
+  animation-duration: 5s;
+  animation-timing-function: linear;
+  animation-delay: 0.5s;
+  animation-iteration-count: 1;
+  animation-direction: alternate;
+  animation-fill-mode: forwards;
+  animation-play-state: running;
+
+  /* animation-play-state: paused; */
+
+  /* Atajo de animación */
+  animation: changeColor 5s linear infinite alternate running;
+}
+
+/* Para poner en conjunción con paused */
+/* div:hover {
+  animation-play-state: running;  
+} */
+
+/* PASO 2 - CREAR LA ANIMACION */
+/* Es como una película donde se indica, según el porcentaje, que va a ocurrir */
+@keyframes changeColor {
+  0% {
+    transform: translateX(0);
+    background: blue;
+  }
+
+  /* 50% {
+    transform: translateX(700px);
+    background: orange;
+  } */
+
+  100% {
+    transform: translateX(1000px);
+    background: #000;
+  }
+}

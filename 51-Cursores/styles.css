@@ -1,0 +1,43 @@
+/* Cursores */
+
+div {
+  width: 300px;
+  height: 300px;
+  background: turquoise;
+  margin: 50px auto;
+
+  /* Opciones del cursor */
+  cursor: none;
+  cursor: default;
+  cursor: pointer; /* El más utilizado */
+  cursor: progress;
+  cursor: wait;
+  cursor: cell; /* Para seleccionar algo */
+  cursor: alias; /* Seleccionar o desplazar elemento */
+  cursor: no-drop; /* No permite seleccionar */
+  cursor: not-allowed;
+  cursor: grab; /* Para arrastrar */
+  cursor: grabbing; /* Cuando se mueve un elemento */
+
+  /* Cursor texto */
+  cursor: text; /* Como si hubiera un texto que se puede seleccionar */
+  cursor: vertical-text; /* Seleccionar texto vertical */
+
+  /* Resize - Modificar tamaño */
+  cursor: crosshair;
+  cursor: ew-resize; /* Resize horizontal */
+  cursor: ns-resize; /* Resize vertical */
+  cursor: nesw-resize; /* Resize diagonal */
+  cursor: nwse-resize; /* Resize diagonal desde otro lado */
+  cursor: all-scroll; /* Mover el elemento completo */
+  cursor: move; /* Mover el elemento completo */
+  cursor: row-resize; /* Editar el tamaño de la fila del elemento */
+  cursor: col-resize; /* Editar el tamaño de la columna del elemento */
+
+  /* Zoom */
+  cursor: zoom-in;
+  cursor: zoom-out;
+
+  /* Cursor personalizado - No es muy común hacerlo */
+  cursor: url(../img/cursor.png), auto;
+}

@@ -1,0 +1,20 @@
+/* Posicionamiento estático y relativo */
+/* Posicionamiento permite darle un libre albedrío a cada uno de los elementos para poder ubicarlos donde yo quiera */
+/* dándoles las coordenadas exactas */
+
+div {
+  background: violet;
+  width: 300px;
+  height: 300px;
+  margin: 20px;
+
+  /* Posicionamiento estático */
+  /* Utiliza el orden natural de los elementos HTML. Por defecto */
+  position: static;
+
+  /* Posicionamiento relativo */
+  /* Los elementos se mueven ligeramente en base a su posición estática */
+  position: relative;
+  top: 100px; /* Desde donde está se va a separar 100px hacia abajo */
+  left: 200px;
+}

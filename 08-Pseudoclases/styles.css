@@ -1,0 +1,30 @@
+/* Pseudoclases */
+/* Son clases falsas porque no están definidos en mis estilos. */
+/* Son selectores que son básicamente estados por los que pasan */
+/* esos selectores. */
+
+/* Enlaces no visitados */
+a:link {
+  color: orange;
+}
+
+/* Enlaces visitados */
+a:visited {
+  color: violet;
+}
+
+/* Input seleccionado */
+input:focus {
+  background: red;
+}
+
+/* Hover - Pasar cursor encima de mis elementos */
+a:hover {
+  color: red;
+  font-size: 20px;
+}
+
+/* Pseudoclase de negación - excluir */
+p:not(.miparrafo) {
+  color: blue;
+}

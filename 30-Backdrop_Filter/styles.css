@@ -1,0 +1,36 @@
+/* Backdrop Filter */
+
+/* En lugar de aplicar los filtros al contenido del contenedor en general, se aplican solo al fondo de los elementos */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  margin: 0;
+  height: 100vh;
+  background: url(../img/background5.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+div {
+  width: 100%;
+  height: 100vh;
+  /* Se pueden aplicar los filtros que ya conocemos. Ver clase 29-Filtros */
+  /* Sustituir backdrop-filter por filter para ver la diferencia de comportamiento */
+  backdrop-filter: blur(15px);
+  backdrop-filter: brightness(20%);
+}
+
+h1 {
+  /* Lo centra en el eje x */
+  text-align: center;
+  /* Espaciado de linea. Lo centra en el eje y */
+  line-height: 100vh;
+  font-size: 80px;
+  color: #fff;
+}
+
+/* Esto que se ha hecho es un ejemplo de overlay, para que destaque el texto sobre la imagen */

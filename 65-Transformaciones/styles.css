@@ -1,0 +1,49 @@
+/* Transformaciones */
+/* Permite transformar nuestros elementos */
+/* Unido a las transiciones, lo hace muy poderoso */
+
+div {
+  width: 200px;
+  height: 200px;
+  margin: 50px;
+  display: inline-block;
+}
+
+/* Mover o trasladar */
+#trasladar {
+  background: #ed561a;
+  transform: translateX(500px);
+  transform: translateY(-100px);
+
+  /* Mover 0px en el eje X y 50px en el eje Y */
+  transform: translate(0px, 50px);
+}
+
+/* Aumentar tamaño */
+#escalar {
+  background: #8c00dd;
+
+  transition: all 0.5s;
+}
+
+#escalar:hover {
+  transform: scale(1.5);
+}
+
+/* Girar o rotar elementos */
+#rotar {
+  background: #1aef9d;
+
+  transition: all 0.5s;
+}
+
+#rotar:hover {
+  transform: rotate(150deg);
+}
+
+/* Deformar elementos */
+#deformar {
+  background: #8bd130;
+
+  transform: skew(-40deg);
+}

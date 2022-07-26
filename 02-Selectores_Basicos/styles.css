@@ -1,0 +1,31 @@
+/* Selector por etiqueta - Afecta a todos las etiquetas */
+h1 {
+  color: green;
+}
+
+/* Selector por ID - Sólo para un elemento */
+#mi-parrafo {
+  color: blue;
+}
+
+/* Selector por clases - Para reutilizar */
+.texto-naranja {
+  color: orange;
+}
+
+.fuente-bold {
+  font-weight: 600;
+}
+
+.fondo-color {
+  background-color: red;
+}
+
+.texto-blanco {
+  color: #fff;
+}
+
+/* Clases agrupadas */
+.fondo-color.texto-blanco {
+  font-size: 30px;
+}

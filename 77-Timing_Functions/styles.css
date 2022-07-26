@@ -1,0 +1,108 @@
+/* Timing Functions */
+/* Es lo que permite la velocidad del movimiento de mis elementos dentro de una animación */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  width: 800px;
+  margin: auto;
+}
+
+section {
+  width: 100%;
+  height: auto;
+  border: 3px solid crimson;
+  border-radius: 10px;
+  padding: 20px;
+  margin: 20px;
+  display: inline-block;
+}
+
+h1 {
+  font-family: sans-serif;
+  text-align: center;
+  font-weight: normal;
+  letter-spacing: 2px;
+  font-size: 2em;
+  text-transform: uppercase;
+}
+
+section div {
+  width: 100px;
+  height: 100px;
+  margin: 20px 0 0;
+  background: crimson;
+  border-radius: 10px;
+  animation: animate 5s 1 forwards normal;
+}
+
+.linear {
+  /* Velocidad constante */
+  animation-timing-function: linear;
+}
+
+.ease {
+  /* Se retrasa al principio, luego va rápido y luego se vuelve a retrasar al final */
+  /* Es el valor por defecto */
+  animation-timing-function: ease;
+}
+
+.easein {
+  /* Arranca lento y llega rápido al final */
+  animation-timing-function: ease-in;
+}
+
+.easeout {
+  /* Arranca rápido y llega lento */
+  animation-timing-function: ease-out;
+}
+
+.easeinout {
+  /* Arranca lento, luego va rápido y acaba lento */
+  /* Es una mezcla del ease-in con el ease-out */
+  animation-timing-function: ease-in-out;
+}
+
+.steps {
+  /* Va por pasos */
+  /* En este ejemplo se salta el paso inicial de la animación y va directamente al final */
+  animation-timing-function: step-start;
+
+  /* En este ejemplo se salta el paso final de la animación y se queda en el inicio. Cuando la animación termina va al final */
+  animation-timing-function: step-end;
+
+  /* La cantidad de pasos que quiero que de ese elemento y como quiero que los de */
+  /* En el ejemplo quiero 4 pasos y va a hacer un jump-start */
+  /* El primer paso no lo hace (jump-start --> Sáltate el primer paso) */
+  animation-timing-function: steps(4, jump-start);
+
+  /* El primer paso si lo hace y se salta el último */
+  animation-timing-function: steps(4, jump-end);
+
+  /* Se salta el primer y último pasos */
+  animation-timing-function: steps(4, jump-both);
+
+  /* No salta ningún paso. Es el más usado */
+  animation-timing-function: steps(4, jump-none);
+}
+
+.cubic {
+  /* Animación personalizada */
+  /* https://cubic-bezier.com/#.17,.67,.83,.67 */
+  /* Sirve para crear la curva de animación */
+  animation-timing-function: cubic-bezier(0, 1, 1, 0.05);
+}
+
+@keyframes animate {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(650px);
+  }
+}

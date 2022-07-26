@@ -1,0 +1,5 @@
+/* Selector hijo */
+/* Dado el padre contenedor entra a sus hijos directos div y a su vez, dado ahora ahora ese padre div, entra a sus hijos directos h1 */
+.contenedor > div > h1 {
+  color: blue;
+}

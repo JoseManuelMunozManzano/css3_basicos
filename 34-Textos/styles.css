@@ -1,0 +1,56 @@
+/* Estilos de texto */
+
+h1 {
+  font-size: 70px;
+  font-weight: 100;
+  font-style: italic;
+  color: darkolivegreen;
+
+  /* Espaciado de letras */
+  letter-spacing: 10px;
+
+  /* Espaciado de palabras */
+  word-spacing: 50px;
+
+  /* Interlineado */
+  line-height: 50px;
+
+  /* Sangría */
+  text-indent: 100px;
+
+  /* Borde de texto */
+  /* Estas dos propiedades trabajan juntas */
+  -webkit-text-fill-color: crimson;
+  -webkit-text-stroke: 2px #000;
+
+  /* Alinear texto */
+  text-align: start;
+  text-align: end;
+  text-align: center;
+  /* To-do el contenido ocupa el mismo espacio. Aplica sobre todo a 
+  párrafos */
+  text-align: justify;
+
+  /* Transformar texto */
+  text-transform: uppercase;
+  text-transform: capitalize;
+  text-transform: lowercase;
+}
+
+p {
+  /* Otro ejemplo de interlineado */
+  line-height: 50px;
+
+  /* Alinear texto */
+  text-align: justify;
+}
+
+/* Primera línea del párrafo */
+p::first-line {
+  color: red;
+}
+
+/* Primera letra */
+p::first-letter {
+  font-size: 50px;
+}

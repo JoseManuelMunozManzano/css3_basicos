@@ -1,0 +1,40 @@
+/* Tipos de display */
+/* Como se van a ubicar los elementos */
+
+div {
+  width: 200px;
+  height: 200px;
+  background: turquoise;
+  margin: 10px;
+
+  /* Por defecto - Se aplica en vertical */
+  display: block;
+
+  /* En linea - Horizontal. Ignora width y height */
+  /* Se acoplan al contenido que tienen dentro */
+  display: inline;
+
+  /* En linea - Horizontal. NO ignora width y height */
+  display: inline-block;
+
+  /* Actua como lista */
+  display: list-item;
+
+  /* Actua como la celda de una tabla. Es el comportamiento de etiquetas como <th> o <td> */
+  border: 1px solid black;
+  display: table-cell;
+
+  /* Actua como la fila de una tabla. Es el comportamiento de etiquetas como <tr> */
+  display: table-row;
+
+  /* Ocultar elementos */
+  /* Forma 1. Usando display. Desaparece el espacio del elemento. No está */
+  /* display: none; */
+  /* Forma 2: Usando visibility. Sigue tomando el espacio del elemento. Esta pero no se ve */
+  /* visibility: hidden; */
+  /* Ver ejemplo en el html para ver la diferencia entre display y visibility */
+
+  /* Display flex lo veremos más adelante */
+
+  /* Display grid lo veremos más adelante */
+}

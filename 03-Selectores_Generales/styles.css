@@ -1,0 +1,5 @@
+/* Selector general - a todos los elementos */
+/* Util para resetear valores que los navegadores establecen por defecto */
+* {
+  color: blue;
+}

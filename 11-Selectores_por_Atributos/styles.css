@@ -1,0 +1,24 @@
+/* Selector por atributo []*/
+
+input[type='number'] {
+  background: red;
+}
+
+a[href='www.google.com'] {
+  color: orange;
+}
+
+/* Que contengan una palabra */
+a[href*='udemy'] {
+  color: violet;
+}
+
+/* Que comience por una palabra */
+a[href^='http'] {
+  color: red;
+}
+
+/* Que terminen por una palabra */
+a[href$='.pdf'] {
+  color: yellowgreen;
+}

@@ -1,0 +1,41 @@
+/* Z Index */
+/* Permite manejar los niveles en los que se van a ir desplegando nuestros elementos en el eje Z */
+/* A más valor de la propiedad z-index, más arriba en el eje Z estará */
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+div {
+  position: absolute;
+}
+
+h1 {
+  position: absolute;
+  font-size: 40px;
+  color: #fff;
+  font-family: sans-serif;
+  margin: 100px;
+
+  /* El texto h1 esta encima de todos los elementos */
+  z-index: 2;
+}
+
+.fondo {
+  width: 100%;
+  height: 100vh;
+  background-image: url(../img/background1.jpg);
+
+  /* Fondo por detrás de todos los elementos */
+  z-index: 0;
+}
+
+.box {
+  width: 100%;
+  height: 100vh;
+  background: rgba(0, 102, 255, 0.5);
+
+  /* Box delante de fondo */
+  z-index: 1;
+}
