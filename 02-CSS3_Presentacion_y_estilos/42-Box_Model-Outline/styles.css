@@ -1,0 +1,24 @@
+/* Outline */
+
+/* Hay ciertos elementos HTML5 que trabajan el borde de una manera diferente */
+/* Los input, enlaces, botones...además del borde normal, tienen un contorno que se puede controlar con la propiedad outline */
+/* Ese contorno se lo asigna el navegador */
+
+.box {
+  text-align: center;
+  margin: 200px auto;
+}
+
+input,
+a,
+button {
+  outline-color: blue;
+  outline-style: solid;
+  outline-width: 2px;
+
+  /* Atajo */
+  outline: 1px solid red;
+
+  /* Si no queremos que esté ese contorno */
+  outline: none;
+}

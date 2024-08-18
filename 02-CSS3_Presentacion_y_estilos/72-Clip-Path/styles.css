@@ -1,0 +1,27 @@
+/* Clip-path */
+
+/* Permite crear figuras como polígonos, círculos */
+/* La web que se informa es un generador de clip-path que puede ayudarnos bastante */
+/* https://bennettfeely.com/clippy/ */
+
+div {
+  width: 200px;
+  height: 200px;
+  background: orange;
+  display: inline-block;
+  margin-right: 30px;
+}
+
+.div1 {
+  /* Estos números son la posición de cada punta del polígono */
+  /* Cada par de valores indica el eje X y el eje Y */
+  clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+}
+
+.div2 {
+  clip-path: polygon(0% 0%, 100% 0%, 100% 75%, 75% 75%, 75% 100%, 50% 75%, 0% 75%);
+}
+
+.div3 {
+  clip-path: circle(69.3% at 50% 84%);
+}

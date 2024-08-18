@@ -1,0 +1,26 @@
+/* Posicionamiento pegajoso (sticky) */
+
+/* Se mantiene el elemento fijo unicamente en mi contenedor */
+/* Para que se cumpla el sticky, el contenedor debe tener un alto establecido o contenido que especifique su alto */
+
+/* Se confunde con el posicionamiento fijo, pero a diferencia de el, este posicionamiento es pegajoso respecto al contenedor padre. */
+
+/* Se hace el scroll, pero cuando llega al final del padre se detiene */
+
+section {
+  width: 800px;
+  /* Para que funcione sticky el contenedor debe tener un alto o contenido */
+  height: 500px;
+  margin: 50px auto;
+  background: #979797;
+}
+
+.box1 {
+  width: 100px;
+  height: 100px;
+  background: violet;
+
+  /* Para que funcione, hay que indicar sticky y darle una posición top */
+  position: sticky;
+  top: 20px;
+}

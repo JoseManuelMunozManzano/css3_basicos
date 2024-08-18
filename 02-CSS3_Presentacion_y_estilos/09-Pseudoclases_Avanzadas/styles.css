@@ -1,0 +1,46 @@
+/* Pseudoclases avanzadas */
+
+/* Primer elemento */
+p:first-child {
+  color: blue;
+}
+
+/* Ultimo elemento */
+p:last-child {
+  color: red;
+}
+
+/* N elemento */
+p:nth-child(3) {
+  color: turquoise;
+}
+
+/* N elemento empezando desde abajo hacia arriba */
+p:nth-last-child(3) {
+  color: violet;
+}
+
+/* Elementos pares - Primera forma */
+/* p:nth-child(2n) {
+  color: orange;
+} */
+
+/* Elementos pares - Segunda forma */
+p:nth-child(even) {
+  color: orange;
+}
+
+/* Elementos impares - Primera forma */
+p:nth-child(2n-1) {
+  color: red;
+}
+
+/* Elementos impares - Segunda forma */
+/* p:nth-child(odd) {
+  color: red;
+} */
+
+/* Elementos N */
+p:nth-child(4n) {
+  color: black;
+}

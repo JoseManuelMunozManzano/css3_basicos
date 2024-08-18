@@ -1,0 +1,50 @@
+/* Fonts */
+
+@import url(https://fonts.googleapis.com/css?family=Roboto:100,100italic,300,300italic,regular,italic,500,500italic,700,700italic,900,900italic);
+
+/* Fonts básicas */
+/* Están en nuestro sistema, en el navegador y las va a determinar de forma automática */
+/* No todos los sistemas tienen las mismas fuentes instaladas. Para evitar problemas, se separan con comas distintas fuentes y si la primera no la tenemos instalada, intenta usar la segunda, luego si es necesario una tercera.... Como programadores, debemos dejar la fuente más standard la última */
+h1 {
+  font-family: 'Times New Roman', sans-serif, Arial, Helvetica;
+}
+
+/* Fonts descargadas */
+/* Por ejemplo descargadas de: https://fonts.google.com/ */
+/* Una vez descargadas, para usarla hay que cargar la fuente. Le damos un nombre y la ubicación */
+@font-face {
+  font-family: 'Train One';
+  src: url(../fonts/Train_One/TrainOne-Regular.ttf);
+}
+
+p:first-of-type {
+  /* Aquí indicamos el nombre dado en @font-face, font-family */
+  /* No es tan necesario indicar otra fuente standard porque nos estamos asegurando de cargarla */
+  font-family: 'Train One';
+}
+
+/* Fonts externas */
+/* Necesitan conexión a Internet */
+
+/* Desde VSCode pulsar Cmd+Shift+P y buscar Google Fonts */
+/* Aparecen 2 posibilidades. Seleccionar primero Google Fonts: insert <link> */
+/* Luego buscar Train One */
+/* Esta línea se escribe automáticamente */
+/* <link href="https://fonts.googleapis.com/css?family=Train+One:regular" rel="stylesheet" /> */
+/* Hay que llevarla al head de la página web */
+/* Entonces, en lugar de usar la regla @font-face estamos cargando con ese enlace la fuente */
+p:nth-of-type(2) {
+  font-family: 'Train One';
+}
+
+/* Otra forma de usar fonts externas es: */
+/* Desde VSCode pulsar Cmd+Shift+P y buscar Google Fonts */
+/* Aparecen 2 posibilidades. Seleccionar ahora Google Fonts: insert CSS @import */
+/* Luego buscar Roboto */
+/* Esta línea se escribe automáticamente */
+/* @import url(https://fonts.googleapis.com/css?family=Roboto:100,100italic,300,300italic,regular,italic,500,500italic,700,700italic,900,900italic); */
+/* Nos la llevamos al principio de nuestro CSS */
+/* Esto hace exactamente lo mismo que hace el <link> */
+p:nth-of-type(3) {
+  font-family: 'Roboto';
+}

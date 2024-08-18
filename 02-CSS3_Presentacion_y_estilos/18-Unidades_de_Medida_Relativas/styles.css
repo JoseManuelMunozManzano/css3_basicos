@@ -1,0 +1,42 @@
+/* Unidades de medida relativa */
+
+/* Son variables y tiene que ver con el tamaño de un contenedor padre, raiz... */
+
+/* En este ejemplo establecemos un valor de fuente de 50px al root (NOTA: el predefinido por el navegador es de 16px) */
+:root {
+  font-size: 50px;
+}
+
+/* Y establecemos un valor de fuente 20px al padre de los elementos del fichero html */
+body {
+  font-size: 20px;
+}
+
+h1 {
+  /* REM - relativo al contenedor abuelo, al contenedor superior del html, en este caso el raiz */
+  /* Haciéndolo de 3rem, su valor es 150px, relativo al valor del abuelo, 50px * 3 = 150px */
+  font-size: 3rem;
+
+  /* EM ya no es relativo a la carpeta raiz, sino al padre directo */
+  /* En este caso el padre del h1 es el body, de ahí que 20px * 2 = 40px */
+  font-size: 2em;
+
+  /* EX  - mitad de tamaño predefinido por el navegador. Sobre 16px la mitad serían 8 */
+  font-size: 1ex;
+
+  /* CH - tiene en cuenta el ancho del carácter 0 para poder determinar cual es el tamaño de medida */
+  font-size: 1ch;
+}
+
+div {
+  background: blue;
+
+  /* Porcentaje - relativa al padre o al contenedor. Es relativa y flexible porque es relativa al contenedor y flexible
+  al tamaño de pantalla. Es la más recomendada cuando estamos hablando de responsive design */
+  /* En el ejemplo el alto está fijo a 200px y el ancho se va a acoplar al 50% del tamaño del contenedor padre,
+  que en este caso es el body */
+  width: 50%;
+  height: 200px;
+}
+
+/* Los más usados son EM y REM, que además permiten trabajar con herencia y porcentaje para responsive design */

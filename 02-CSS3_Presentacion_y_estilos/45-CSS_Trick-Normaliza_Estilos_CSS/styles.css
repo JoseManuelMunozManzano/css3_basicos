@@ -1,0 +1,17 @@
+/* Normalizar estilos CSS */
+
+/* Reseteando estilos del navegador. 
+  Se usa en proyectos pequeños */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Para proyectos grandes */
+/* En vez de esas líneas de código se puede usar https://necolas.github.io/normalize.css/ 
+que resetea todos los elementos, en los que cada navegador pone un valor por defecto, 
+para que podamos tener el mayor control sobre ellos */
+
+/* Para agregarlo a los proyectos, vamos a la página, pulsamos el botón descargar y sobre el código que aparece,
+ botón derecho y seleccionar Guardar como... y guardarlo en la carpeta deseada con el nombre normalize.css */

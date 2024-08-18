@@ -1,0 +1,22 @@
+/* Tamaños de Contenedores */
+
+div {
+  background-color: blue;
+
+  /* Ancho y alto */
+  width: 1000px;
+  height: 400px;
+
+  /* Máximo y mínimo */
+  /* Para responsive. Limita el tamaño */
+  max-width: 500px; /* Como máximo va a tener 500px de ancho, aunque arriba se haya dicho 1000px*/
+
+  min-width: 200px; /* Como mínimo va a tener 200px de ancho, aunque arriba se dijera 100px */
+
+  /* Igual para altura */
+  /* max-height: 500px;
+  min-height: 200px; */
+
+  /* Función calc - Calcular el tamaño */
+  height: calc(100vh - 100px);
+}

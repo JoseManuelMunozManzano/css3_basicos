@@ -1,0 +1,22 @@
+/* Hyphens - Guiones */
+
+div {
+  width: 200px;
+  border: 1px solid #000;
+
+  /* PRIMERA FORMA */
+  /* No hace ningún quiebre de palabra */
+  /* overflow-wrap: normal; */
+  /* Cada vez que vea la oportunidad de quiebre, se rompe la palabra */
+  /* overflow-wrap: anywhere; */
+  /* Hace lo mismo que anywhere */
+  /* overflow-wrap: break-word; */
+
+  /* SEGUNDA FORMA */
+  /* Rompe todas las palabras que pueda cuando no caben */
+  /* word-break: break-all; */
+
+  /* TERCERA FORMA */
+  /* Esta es la única que coloca guiones cuando las palabras no caben */
+  hyphens: auto;
+}

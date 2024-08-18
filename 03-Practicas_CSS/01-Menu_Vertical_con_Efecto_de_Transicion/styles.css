@@ -1,0 +1,92 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans',
+    'Helvetica Neue', sans-serif;
+}
+
+body {
+  background: #222;
+}
+
+ul {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+ul li {
+  position: relative;
+  list-style: none;
+  margin: 5px;
+}
+
+ul li a {
+  position: relative;
+  height: 40px;
+
+  /* Para que respete el tamaño, porque los enlaces son inline */
+  display: block;
+
+  text-decoration: none;
+  padding: 5px 10px;
+  margin: 20px 0;
+  font-weight: 300;
+  letter-spacing: 2px;
+
+  /* Para cuando tengamos los elmentos span uno arriba del otro, uno desaparezca */
+  overflow: hidden;
+}
+
+ul li a::before {
+  content: '';
+
+  /* Para ubicarlo donde le digamos dentro del elemento ul li a */
+  /* ul li a tiene position: relative */
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 100%;
+  background: #ec333f;
+
+  /* Con scaleX(0) nuestro elemento no aparece. Con scaleX(1) si */
+  transform: scaleX(0);
+  transition: transform 0.5s;
+}
+
+ul li a:hover::before {
+  transform: scaleX(1);
+
+  /* Porque por defecto la transformación se inicia desde el centro */
+  transform-origin: left;
+  transition-delay: 0.5s;
+}
+
+ul li a span {
+  position: relative;
+
+  /* Para que se acople automáticamente al tamaño que tiene el padre, el enlace */
+  width: 100%;
+  height: 100%;
+
+  /* Para que aparezca uno debajo del otro */
+  display: block;
+
+  color: #fff;
+  text-align: center;
+  font-size: 22px;
+
+  transition: all 0.5s;
+}
+
+ul li a:hover span:nth-child(1) {
+  transform: translateY(-100%);
+}
+
+ul li a:hover span:nth-child(2) {
+  transform: translateY(-100%);
+}

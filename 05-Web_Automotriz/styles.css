@@ -1,0 +1,92 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/** CONTENEDOR  */
+section {
+  /* dejo 50px para el menú de colores de abajo */
+  height: calc(100vh - 50px);
+  background: url(wallpaper.jpg);
+  background-size: cover;
+  background-position: center;
+}
+
+/** MENU  */
+ul {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  /* Los 50px que se restaron en section */
+  height: 50px;
+}
+
+ul li {
+  float: left;
+  /* Porque son 5 colores */
+  width: 20%;
+  height: 100%;
+  list-style: none;
+
+  /* Para cambiar el color del coche */
+  /* hue cambia el color predominante */
+  mix-blend-mode: hue;
+}
+
+/* Al entrar al ul la opacidad la pongo a 0, se ve el menú blanco */
+ul:hover li {
+  opacity: 0;
+}
+
+/* Al entrar al li la opacidad la pongo a 1 */
+/* Los demás siguen con opacidad a 0 así que todo el menú */
+/* se ve con ese color */
+ul li:hover {
+  opacity: 1;
+}
+
+/*? COLORES DEL MENU  */
+ul li:nth-child(1) {
+  background: #ff5500;
+}
+
+ul li:nth-child(2) {
+  background: #5500ff;
+}
+
+ul li:nth-child(3) {
+  background: #00b3b3;
+}
+
+ul li:nth-child(4) {
+  background: #44cc00;
+}
+
+ul li:nth-child(5) {
+  background: #e645a0;
+}
+
+/*? HOVER DEL MENU  */
+ul li:hover:nth-child(1) {
+  /* Sombra sin difuminado y enorme. Toda la página web se
+  pone del color del elemento */
+  box-shadow: 0 0 0 1500px #ff5500;
+}
+
+ul li:hover:nth-child(2) {
+  box-shadow: 0 0 0 1500px #5500ff;
+}
+
+ul li:hover:nth-child(3) {
+  box-shadow: 0 0 0 1500px #00b3b3;
+}
+
+ul li:hover:nth-child(4) {
+  box-shadow: 0 0 0 1500px #44cc00;
+}
+
+ul li:hover:nth-child(5) {
+  box-shadow: 0 0 0 1500px #e645a0;
+}

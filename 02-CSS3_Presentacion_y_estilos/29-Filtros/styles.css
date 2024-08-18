@@ -1,0 +1,28 @@
+/* Filtros */
+
+/* Alteran el estilo de nuestras imágenes o de nuestros contenedores */
+
+img {
+  width: 80%;
+
+  /* Valores más cercarnos al 100% hace la imagen más gris */
+  filter: grayscale(80%);
+  /* blur se usa mucho. Se indica una cantidad de px */
+  filter: blur(5px);
+  /* Se indica porcentaje. A más % más sepia */
+  filter: sepia(80%);
+  /* Se indica porcentaje. A más % más saturado */
+  filter: saturate(80%);
+  /* Se indica porcentaje. A más % más opaco */
+  filter: opacity(80%);
+  /* Se indica porcentaje. A menos % más oscuro */
+  filter: brightness(80%);
+  /* Se indica porcentaje. A menos % más gris */
+  filter: contrast(80%);
+  /* Muy popular. Se indica grados. Al aumentar el grado cambia el color */
+  filter: hue-rotate(180deg);
+  /* No se usa mucho. Invierte colores. Se indica porcentaje. A mas % mayor mezcla al realizar la inversión */
+  filter: invert(80%);
+  /* Permite crear sombras a un elemento. Se indica un tamaño en eje x, eje y, un tamaño de difuminado de esa sombra y el color de la sombra */
+  filter: drop-shadow(20px 10px 5px #000);
+}

@@ -1,0 +1,40 @@
+/* Funciones */
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/* Esto genera un scroll ya que tengo para .container un 100vh 
+y para el .menu un height de 100px, lo que desborda el alto máximo */
+.menu {
+  background: #000;
+  width: 100%;
+  height: 100px;
+}
+
+div.container {
+  background: blue;
+  width: 100%;
+  height: 100vh;
+
+  /* Para evitar el desborde se usa una función llamada calc */
+  height: calc(100vh - 100px);
+
+  /* Funcion min()  */
+  /* La función CSS min() permite establecer el valor mas pequeño (mas negativo) de una lista de expresiones separadas 
+  por coma como el valor de una propiedad CSS */
+  /* En el ejemplo, se van a aplicar 200px siempre y cuando el 25% de mi contenedor padre sea más grande de 200px */
+  /* Se puede hacer más pequeño pero no más grande */
+  width: min(200px, 25%);
+
+  /* Función max() */
+  /* La función CSS max() permite establecer el valor mas grande (mas positivo) de una lista de expresiones separadas 
+  por coma como el valor de una propiedad CSS */
+  width: max(300px, 25%);
+
+  /* Función clamp() */
+  /* Es la unión de min() y max() en una línea */
+  /* Se indica el mínimo, el porcentaje que debe tener ese contenedor para aplicar el mínimo y el máximo, y el máximo */
+  width: clamp(100px, 25%, 300px);
+}

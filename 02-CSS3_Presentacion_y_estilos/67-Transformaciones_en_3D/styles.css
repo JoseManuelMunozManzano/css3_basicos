@@ -1,0 +1,65 @@
+/* Transformaciones en 3D */
+
+/* Para que funcione la perspectiva (el efecto 3D) hay que aplicårsela al elemento padre del elemento al que le quiero aplicar esa perspectiva. */
+
+body {
+  /* Se va a separar mi visión (nosotros estamos en el eje Z) del elemento 700px  */
+  perspective: 700px;
+
+  /* Desde donde lo estoy viendo (en el eje Z) Dependiendo desde donde lo vea mi perspectiva será diferente */
+  perspective-origin: center;
+}
+
+.box {
+  margin: 150px auto;
+  width: 300px;
+  height: 300px;
+  background: lightseagreen;
+  transition: all 5s;
+
+  /* Transformaciones en 3D */
+
+  /* ROTATE */
+  transform: rotateX(50deg);
+  transform: rotateY(50deg);
+  /* Como nosotros estamos en el eje Z si metemos rotación en el eje Z se vería como en 2D */
+  /* Esto es porque el elemento está rotando en la misma dirección a la que yo lo estoy viendo */
+  transform: rotateZ(50deg);
+
+  /* Atabjo */
+  /* EjeX, EjeY, EjeZ y la cantidad a rotar */
+  transform: rotate3d(1, 0, 0, 70deg);
+
+  /* TRANSLATE */
+  /* Trasladar en el eje Z parece que haga el elemento más grande, pero no es cierto, lo mueve hacia nuestra dirección (nosotros somos eje Z) */
+  transform: translateZ(300px);
+
+  /* Atajo */
+  transform: translate3d(100px, 100px, 100px);
+
+  /* SCALE */
+  /* Como aumenta el tamaño en el ejeZ no lo estamos notando */
+  /* Por eso se le añade la rotación */
+  transform: scaleZ(4) rotateX(50deg);
+
+  transform: rotateY(90deg);
+
+  /* Esta propiedad permite aplicar 3D a los elementos hijos */
+  transform-style: preserve-3d;
+}
+
+.content {
+  width: 300px;
+  height: 300px;
+  background: yellow;
+  margin: auto;
+
+  /* Recuerda: para aplicar 3D a este elemento hay que aplicar perspectiva al elemento padre */
+  /* Pero como body ya tiene la perspectiva entonces lo que se hace es aplicar */
+  /* la propiedad transforma-style al elemento padre */
+  transform: rotateY(90deg);
+}
+
+.box:hover {
+  transform: rotateY(360deg);
+}

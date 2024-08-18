@@ -1,0 +1,21 @@
+/* Selectores descendientes */
+/* Dado un elemento padre se quiere acceder a sus elementos internos */
+
+#contenedor p {
+  color: blue;
+}
+
+#contenedor2 h3 {
+  color: violet;
+}
+
+/* #contenedor3 ul li a {
+  color: yellowgreen;
+} */
+
+/* Otra forma de hacer lo de arriba, pero cuidado, porque puede haber
+elementos a que no estén dentro de elementos ul y li y también les 
+afectaría */
+#contenedor3 a {
+  color: yellowgreen;
+}

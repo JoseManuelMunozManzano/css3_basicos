@@ -1,0 +1,22 @@
+/* Box Sizing */
+
+/* Permite trabajar mejor con los tamaños dentro de mis contenedores en CSS3 */
+
+/* Seteando valores por defecto del navegador de la manera correcta */
+* {
+  margin: 0;
+  padding: 0;
+
+  /* Indica que los contenedores deben tener el tamaño que yo especifique */
+  box-sizing: border-box;
+}
+
+div {
+  background-color: #0090c9;
+  width: 100%;
+  height: 200px;
+
+  /* Al poner este padding, aunque mi contenedor ocupa el 100% del ancho, lo hago más ancho todavía y aparece el scroll horizontal. */
+  /* Para que respete el ancho del 100% aunque se le añada este padding es por lo que se añade la propiedad box-sizing con valor border-box */
+  padding: 20px;
+}

@@ -1,0 +1,48 @@
+/* Transiciones */
+/* Transición es que un elemento pase de un estado a otro de forma pausada, para que el usuario pueda ver el cambio */
+
+div {
+  width: 200px;
+  height: 200px;
+  margin: 70px;
+  display: inline-block;
+}
+
+.elemento1 {
+  background: #ed8b1a;
+}
+
+.elemento1:hover {
+  background: #ff3300;
+}
+
+.elemento-transicion {
+  background: #00cedd;
+
+  /* Propiedades de transición */
+
+  /* Se puede indicar: */
+  /* 1. la propiedad a la que quiero que se aplique la transición */
+  /*  Si se indica all se aplica transición a todas las propiedades que tiene este elemento */
+  transition-property: background;
+  /* 2. El tiempo que dura */
+  transition-duration: 1s;
+  /* 3. El movimiento o la velocidad de esa transición */
+  /*    Esto funciona también para las animaciones */
+  transition-timing-function: linear;
+  /* 4. El retraso que puede tener la transición */
+  transition-delay: 1s;
+
+  /* Atajo */
+  transition: background 1s linear 1s;
+
+  transition: all 1s linear 0.2s;
+}
+
+.elemento-transicion:hover {
+  background: #001380;
+
+  /* No es correcto cargar las transiciones en el estado hover porque crea un efecto que no agrada a la vista */
+  /* En concreto, cuando quitamos el hover, la transición es abrupta */
+  /* Hay que utilizar la propiedad de transición dentro del elemento donde queremos aplicarla y no en el hover */
+}

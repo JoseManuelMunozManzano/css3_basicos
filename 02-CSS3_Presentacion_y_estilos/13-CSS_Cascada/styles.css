@@ -1,0 +1,19 @@
+/* CSS CASCADA */
+/* Toma los elementos de arriba a abajo dando mayor importancia al de abajo */
+/* Toma primero los elementos mas especificos */
+/* Se puede romper la regla con !important */
+
+/* Este es más específico y toma la prioridad */
+/* p.miparrafo {
+  color: blue;
+} */
+
+/* Rompiendo la regla de cascada con !important */
+/* Mejor no usarlo mucho */
+p {
+  color: blue !important;
+}
+
+p {
+  color: red;
+}

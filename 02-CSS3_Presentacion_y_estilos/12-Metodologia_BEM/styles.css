@@ -1,0 +1,52 @@
+/* BEM
+    - B BLOCK .block
+    - E ELEMENT .block__item
+    - M MODIFIER   .block--modifier       
+*/
+/* Permite reutilizar el código porque no se amarra a elementos concretos o contenedores padre... */
+/* Se basa en el uso de clases. El CSS moderno se basa en el uso 
+de clases en todos los elementos */
+
+/* Block */
+.box {
+  width: 200px;
+  background: lightskyblue;
+  padding: 40px;
+  margin: 20px;
+}
+
+/* Element */
+.box__btn {
+  width: 100px;
+  height: 40px;
+  background: rgb(2, 68, 153);
+  border: none;
+  color: #fff;
+}
+
+/* Modifier - Para modificar ciertas cositas de elementos */
+.box--bgred {
+  background: red;
+}
+
+.btn--bgred {
+  background: rgb(128, 0, 0);
+}
+
+/* Código antes de usar la metodología BEM */
+/* Indicar que lo correcto es usar clases para poder reutilizar esas clases en otros contenedores */
+/* En este ejemplo, no se aplican estilos al section del html */
+/* div.box {
+  width: 200px;
+  background: lightskyblue;
+  padding: 40px;
+  margin: 20px;
+}
+
+div.box button {
+  width: 100px;
+  height: 40px;
+  background: rgb(2, 68, 153);
+  border: none;
+  color: #fff;
+} */

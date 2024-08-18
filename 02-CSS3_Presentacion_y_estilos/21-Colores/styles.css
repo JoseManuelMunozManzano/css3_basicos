@@ -1,0 +1,25 @@
+/* Colores */
+
+div {
+  width: 200px;
+  height: 200px;
+
+  /* Palabra clave */
+  /* Son nombres preestablecidos que generan un color. No son editables */
+  /* No recomendado para proyectos */
+  background-color: crimson;
+
+  /* Hexadecimal */
+  background-color: #d70000;
+
+  /* RGB */
+  background-color: rgb(20, 63, 205);
+
+  /* HSL */
+  /* código de color, saturación y brillo */
+  background-color: hsl(20, 85%, 20%);
+
+  /* Degradado */
+  background: linear-gradient(90deg, blue, orange, crimson, green);
+  background: radial-gradient(green, orange, blue, red);
+}

@@ -1,0 +1,30 @@
+/* Background */
+div {
+  width: 500px;
+  height: 500px;
+  margin: auto;
+  border: 1px solid #000;
+
+  /* Fondo plano */
+  /* La diferencia entre background-color y background es que la primera funciona únicamente para color y la segunda tiene múltiples variables */
+  /* como degradados, imágenes, etc. */
+  background-color: #123456;
+  background: turquoise;
+
+  /* Gradiente */
+  background: linear-gradient(90deg, blue, orange);
+  background: radial-gradient(orange, red);
+
+  /* Imagen de fondo */
+  background-image: url(../img/wallpaper.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+
+  /* Como se comporta la imagen de fondo. Esto sirve para crear efecto Paralax */
+  background-attachment: fixed;
+
+  /* Atajo, salvo el background-size que hay que hacerlo a parte */
+  background: url(../img/wallpaper.jpg) no-repeat fixed center;
+  background-size: cover;
+}

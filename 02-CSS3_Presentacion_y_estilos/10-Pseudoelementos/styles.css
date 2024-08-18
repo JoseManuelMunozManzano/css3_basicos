@@ -1,0 +1,34 @@
+/* Pseudoelementos */
+
+/* Son elementos falsos. Permite generar contenido dinámico que no esta en HTML */
+/* Util para generar capas, iconos y estilos */
+/* Para los pseudoelementos ::before y ::after es obligatorio que tengan la propiedad content */
+span::before {
+  content: '-';
+  font-size: 30px;
+}
+
+span::after {
+  content: 'Hola, texto generado';
+  color: blue;
+}
+
+/* Editar texto */
+p::first-letter {
+  font-size: 45px;
+}
+
+p::first-line {
+  color: red;
+}
+
+/* Listas */
+ul li::marker {
+  color: violet;
+}
+
+/* Placeholder */
+input::placeholder {
+  color: red;
+  font-size: 15px;
+}

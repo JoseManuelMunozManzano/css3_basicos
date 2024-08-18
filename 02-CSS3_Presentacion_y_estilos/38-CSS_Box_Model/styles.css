@@ -1,0 +1,14 @@
+/* CSS Box Model */
+
+/* Cada elemento tiene unas cajas imaginarias a las que se le conoce como box model */
+/* Permiten el espaciado de los elementos (margin, border, padding y contenido) */
+
+div {
+  background-color: #a3a3a3;
+  width: 200px;
+  height: 200px;
+  display: inline-block;
+  padding: 20px;
+  margin: 50px;
+  border: 5px solid #000;
+}

@@ -1,0 +1,31 @@
+/* Unidades flexibles */
+/* Son flexibles con respecto al viewport, es decir, al tamaño de la pantalla del navegador/dispositivo */
+/* No hablamos de contenedores, hablamos de tamaño del navegador o dispositivo */
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+div {
+  background: lightskyblue;
+
+  /* El ancho será el 50% del navegador */
+  width: 50vw;
+  /* El alto será el 50% del navegador */
+  height: 50vh;
+}
+
+h1 {
+  /* Se utiliza mucho para textos, porque permite que el texto se acople al tamaño de la ventana, haciéndolo responsive */
+  font-size: 5vw;
+
+  /* Pero otras unidades que también se usan mucho son vmax y vmin */
+  /* vmax consiste en que en pantallas pequeñas llega un límite a partir del cual el texto ya no se hace más pequeño */
+  /* Si se hará más grande */
+  font-size: 10vmax;
+
+  /* vmin consiste en que en pantallas grandes llega un límite a partir del cual el texto ya no se hace más grande */
+  /* Si se hará más pequeño */
+  font-size: 10vmin;
+}

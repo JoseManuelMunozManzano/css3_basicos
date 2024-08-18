@@ -1,0 +1,13 @@
+/* Selectores Hermanos */
+
+/* Hermano general serían todos los hermanos */
+/* Los estilos se aplican a todos los hermanos span de h1 y con padre articulo*/
+.articulo h1 ~ span {
+  color: blue;
+}
+
+/* Hermano adyacente es el primer hermano que está al lado del indicado */
+/* El estilo se aplica solo a un hermano que sea span adyacente al h1 con padre articulo */
+.articulo h1 + span {
+  color: red;
+}

@@ -1,0 +1,23 @@
+/* Transparencia */
+/* Mientras más cercano al 0 más transparente y al revés */
+
+div {
+  width: 500px;
+  height: 500px;
+
+  /* Transparencia */
+  background-color: transparent;
+
+  /* Transparencia hexadecimal personalizada. Se indica en hexadecimal los 6 dígitos del color y con 2 dígitos más, la cantidad de transparencia */
+  background-color: #00000050;
+
+  /* La forma correcta de aplicar transparencias personalizadas es con RGBA, porque es adaptable y editable que el hexadecimal */
+  background-color: rgba(0, 0, 0, 0.5);
+
+  /* También se puede hacer con HSLA */
+  background-color: hsla(125, 80%, 50%, 40%);
+
+  background: red;
+  /* Opacity permite aplicar transparencia a todo el elemento, no solo al fondo */
+  opacity: 0.2;
+}

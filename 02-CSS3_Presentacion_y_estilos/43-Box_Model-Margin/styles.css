@@ -1,0 +1,25 @@
+/* Margin */
+/* Permite separar el contenedor de otros elementos */
+
+div {
+  width: 200px;
+  height: 200px;
+  background: blue;
+  display: inline-block;
+
+  /* margin */
+  margin-top: 100px;
+  margin-right: 50px;
+  margin-bottom: 20px;
+  margin-left: 200px;
+
+  /* Atajos */
+  margin: 50px;
+
+  /* Primer valor de arriba y abajo y el segundo de izquierda y derecha */
+  margin: 50px 20px;
+  /* Valor de arriba, valor de los lados y valor de abajo */
+  margin: 80px 50px 20px;
+  /* Como las agujas del reloj. Arriba, derecha, abajo e izquierda */
+  margin: 80px 20px 50px 30px;
+}
