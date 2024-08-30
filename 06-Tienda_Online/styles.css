@@ -1,0 +1,79 @@
+/* La fuente se ha importado en VSCode, usando Cmd+Ship+P, seleccionando Google Fonts: Insert CSS @Import y seleccionado la fuente de letra Open Sans */
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:300,regular,500,600,700,800,300italic,italic,500italic,600italic,700italic,800italic);
+
+/** VARIABLES */
+:root {
+  --color-primario: #0d6efd;
+  --color-secundario: #0b5ed7;
+  --color-oscuro: #122936;
+}
+
+/** GENERALES */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Open Sans', sans-serif;
+}
+
+a {
+  text-decoration: none;
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 700;
+}
+
+/** MENU PRINCIPAL */
+.menu-principal {
+  width: 100%;
+  height: 50px;
+  background: #fff;
+
+  /* Esto solo como guía para trabajar */
+  /* border-bottom: 1px solid #dedede; */
+}
+
+.menu-principal div {
+  float: left;
+}
+
+/* Indicamos que el contenedor de la imagen debe respetar el alto del contenedor del menú (los 50px) */
+.nav-imagen {
+  height: 100%;
+}
+
+/* Pero no lo respeta porque la imagen sobrepasa el contenedor. Hay que darle 
+estilos a esa imagen  */
+.nav-imagen img {
+  /* Indico que la imagen ocupe el 50% del ancho del div */
+  width: 50%;
+  /* Y ahora centro la imagen */
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.nav-enlaces a {
+  /* Estos 50px corresponden al alto de .menu-principal. Con esto lo centro */
+  line-height: 50px;
+
+  margin: 0 20px;
+  color: #000;
+  padding: 4px 10px;
+
+  /* Para el recuadro al hacer hover con el cursor */
+  /* Este border es el mismo de .nav-enlaces a:hover, para ya tener el borde creado. Si se crea en el hover, el elemento crece en 2px y se mueven todos los elementos, quedando mal */
+  border: 2px solid transparent;
+  transition: all 0.5s;
+}
+
+/* El uso de la clase active/deactive se trabaja con Javascript */
+.nav-enlaces a.active {
+  color: var(--color-primario);
+}
+
+.nav-enlaces a:hover {
+  border: 2px solid var(--color-primario);
+}
