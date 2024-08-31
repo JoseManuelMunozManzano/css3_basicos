@@ -286,3 +286,47 @@ header button {
   /* Indicamos el opacity a 1 para que, en conjunción con el opacity:0 de arriba, vaya de transparente hacia el color, viéndose mucho mejor */
   opacity: 1;
 }
+
+/** MENSAJE */
+.mensaje {
+  display: inline-block;
+  position: relative;
+  width: 100%;
+  height: 400px;
+  background: url('img/section.jpg');
+  background-attachment: fixed;
+  background-position: left;
+  background-size: auto;
+  margin-top: 50px;
+}
+
+/* Transparencia negra para que el texto resalte */
+/* Se llama overlay y es parecido a lo que hicimos en el header */
+.mensaje::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.3);
+}
+
+.mensaje p {
+  width: 100%;
+
+  /* Centrar horizontalmente */
+  text-align: center;
+
+  /* Para poder centrarlo verticalmente */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  /* Estilos de texto */
+  color: #fff;
+  font-size: 65px;
+  font-weight: 100;
+  text-shadow: 5px 0 10px #000;
+}
