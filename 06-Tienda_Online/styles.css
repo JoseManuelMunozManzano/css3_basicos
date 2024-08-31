@@ -295,8 +295,7 @@ header button {
   height: 400px;
   background: url('img/section.jpg');
   background-attachment: fixed;
-  background-position: left;
-  background-size: auto;
+  background-size: cover;
   margin-top: 50px;
 }
 
@@ -329,4 +328,141 @@ header button {
   font-size: 65px;
   font-weight: 100;
   text-shadow: 5px 0 10px #000;
+}
+
+/** FAVORITO  */
+.favorito {
+  /* Centramos */
+  padding: 20px 150px;
+
+  /* Esta sección ocupará todo el viewport */
+  height: 100vh;
+
+  position: relative;
+}
+
+.favorito::before {
+  content: 'Technology';
+
+  /* Como .favorito tiene position: relative, este se va a acoplar al contenedor padre */
+  position: absolute;
+  bottom: 2%;
+  left: 0;
+
+  font-weight: 600;
+
+  /* Indicamos viewport width para que sea responsive */
+  font-size: 10vw;
+
+  color: rgba(0, 0, 0, 0.1);
+  z-index: -1;
+}
+
+.favorito::after {
+  content: 'Best';
+  position: absolute;
+  top: 2%;
+  right: 0;
+  font-weight: 600;
+  font-size: 10vw;
+  color: rgba(0, 0, 0, 0.05);
+  z-index: -1;
+}
+
+/* Los div hijos directos de .container-favorito los vamos a situar uno a la izquierda del otro */
+/* Es decir, se aplica a .imagen-fav y a .content-fav, hijos directos */
+/* Para conseguir esto, a .content-fav tenemos que darle un ancho que permita situarse a la derecha */
+.container-favorito > div {
+  float: left;
+  margin: 30px;
+}
+
+.imagen-fav {
+  width: 40%;
+  position: relative;
+}
+
+.imagen-fav img {
+  /* La imagen se acopla al contenedor de imagen-fav en el alto y en el ancho */
+  width: 100%;
+  height: 100%;
+
+  transition: all 0.5s;
+}
+
+.imagen-fav::before {
+  content: 'Best Choice';
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: var(--color-secundario);
+  width: 50px;
+  height: 50px;
+  padding: 10px;
+  text-align: center;
+  border-radius: 50%;
+  color: #fff;
+  transform: rotate(-10deg);
+  box-shadow: 0 0 10px 5px var(--color-secundario);
+  z-index: 1;
+
+  /* Para el efecto de hover */
+  transition: all 0.5s;
+}
+
+.imagen-fav:hover::before {
+  /* Para que no pierda la rotación también la indicamos en la transformación */
+  transform: scale(1.2) rotate(-10deg);
+}
+
+.container-favorito:hover .imagen-fav img {
+  transform: scale(1.1);
+}
+
+.content-fav {
+  /* Con este ancho todo el div se mueve a la derecha de .imagen-fav, porque ya cabe */
+  width: 40%;
+  height: 100%;
+}
+
+.content-fav h1 {
+  font-size: 40px;
+  font-weight: 400;
+}
+
+.content-fav h3 {
+  text-transform: uppercase;
+  font-weight: 600;
+  letter-spacing: 2px;
+  color: var(--color-secundario);
+}
+
+/* Indicamos la clase .text porque no queremos que el margin afecte al párrafo de dentro de .content-inferior */
+.content-fav .text p {
+  text-align: justify;
+  margin: 20px 0;
+}
+
+.content-inferior {
+  width: 100%;
+  height: 50px;
+}
+
+.content-inferior .price {
+  /* De nuevo, queremos el precio a la izquierda y el botón Comprar a la derecha */
+  float: left;
+
+  font-size: 40px;
+  line-height: 50px;
+  font-weight: 600;
+  color: var(--color-oscuro);
+}
+
+.content-inferior .buy {
+  /* Como se ha comentado, el botón Comprar flota a la derecha */
+  float: right;
+
+  width: 150px;
+  line-height: 50px;
+  text-align: center;
 }
