@@ -1,0 +1,39 @@
+/** FLEXBOX
+  La propiedad flexbox se aplica al contenedor padre.
+  Permite que los contenedores sean flexibles a su contenedor padre.
+*/
+
+/* Toda esta clase vemos que los estilos se aplican al contenedor padre */
+.flex-container {
+  /* APLICAR FLEXBOX */
+  /* Es obligatorio indicar esta propiedad para convertir a Flexbox */
+  /* Vemos que ya no respetan el tamaño de 100x100 que se le ha colocado en estilos.css, sino
+  que se van acoplando al contenedor padre (hasta un punto en que ya no pueden)
+  Los contenedores hijos se han convertido en cajas flexibles. */
+  display: flex;
+
+  /* Con display: inline-flex los contenedores hijos SI respetan su tamaño, aunque
+  se siguen adaptando al contenedor padre, creando, si es necesario, scroll.
+  Los contenedores hijos NO son del todo flexibles.
+  No se usa mucho.
+  */
+  /* display: inline-flex; */
+
+  /* DIRECCIONES */
+  /* Dependiendo de la dirección, podemos darle una alineación a esos elementos. Esto lo vemos más adelante */
+  flex-direction: row; /* Valor por defecto */
+  /* flex-direction: row-reverse;
+  flex-direction: column;
+  flex-direction: column-reverse; */
+
+  /* DESBORDE */
+  /* Cuando un elemento ya no tiene espacio en una fila, respetando su tamaño de 100x100,
+  y queremos que salte a la siguiente, en vez de seguir apretando los elementos */
+  flex-wrap: nowrap; /* Por defecto. No hay desborde */
+  /* flex-wrap: wrap;
+  flex-wrap: wrap-reverse; */
+
+  /* FLOW */
+  /* Flow o flujo de elementos es un atajo para indicar la dirección y el desbordamiento */
+  flex-flow: row wrap;
+}
