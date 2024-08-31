@@ -24,6 +24,27 @@ a {
   font-weight: 700;
 }
 
+/* Este va a ser el estilo general para los botones. Por eso no le asignamos tamaño */
+/* Como el tamaño de cada botón no tiene por qué ser el mismo, se asigna dicho tamaño en su momento  */
+.btn {
+  background: var(--color-primario);
+  color: #fff;
+  border: none;
+  font-size: 16px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  cursor: pointer;
+  border-radius: 5px;
+
+  /* Vamos a aplicarle un efecto cuando pasemos el cursor por encima */
+  transition: all 0.5s;
+}
+
+.btn:hover {
+  transform: scale(1.1);
+  background: var(--color-secundario);
+}
+
 /** MENU PRINCIPAL */
 .menu-principal {
   width: 100%;
@@ -76,4 +97,62 @@ estilos a esa imagen  */
 
 .nav-enlaces a:hover {
   border: 2px solid var(--color-primario);
+}
+
+/** HEADER  */
+header {
+  width: 100%;
+
+  /* A la altura, le restamos los 50px de alto que ocupa el menú. Evitamos barra de scroll */
+  height: calc(100vh - 50px);
+
+  /* Este position relative es para que luego en header::before, usar position: absolute y poder moverme por este contenedor */
+  position: relative;
+
+  background: url('img/wallpaper2.jpg');
+
+  /* Centrar imagen */
+  /* Usamos fixed para que, al hacer scroll en la web, la imagen quede fija */
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+/* Hacer la imagen más oscura para resaltar el texto h1 */
+header::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  /* El before abarca todo el espacio de la imagen del header */
+  width: 100%;
+  height: 100%;
+
+  background: rgba(0, 0, 0, 0.3);
+}
+
+/* Vamos a darle un tamaño al div para poder centrarlo. Con este se centran sus hijos */
+header div {
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+header h1 {
+  color: #fff;
+  font-size: 50px;
+  letter-spacing: 2px;
+  font-weight: 100;
+  margin: 20px 0;
+  text-shadow: 5px 0 10px #000;
+}
+
+/* Tamaño de botón del header. Coge los estilos generales. */
+header button {
+  width: 180px;
+  height: 50px;
 }
