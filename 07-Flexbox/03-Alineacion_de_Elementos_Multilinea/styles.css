@@ -1,0 +1,21 @@
+/* ALINEACION DE ELEMENTOS MULTILINEA */
+
+/*
+  Usamos la propiedad align-content cuando queremos aplicar una alineación a muchos elementos.
+
+  Es decir, queremos tratar todos esos elementos en conjunto, por ejemplo centrarlos entre ellos y
+  con el espacio del contenedor, o llevarlos todos al inicio... y para ello modifica la línea
+  donde está ese elemento.
+*/
+
+.flex-container {
+  display: flex;
+  flex-flow: row wrap;
+
+  /* Alineación multilinea */
+  align-content: center;
+  align-content: flex-start;
+  align-content: flex-end;
+  align-content: space-around;
+  align-content: space-between;
+}
