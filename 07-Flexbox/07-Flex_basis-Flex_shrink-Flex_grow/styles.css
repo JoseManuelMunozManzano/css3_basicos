@@ -1,0 +1,54 @@
+/* FLEX BASIS, FLEX SHRINK, FLEX GROW */
+
+/*
+  Continuamos trabajando con los elementos hijo de nuestro Flexbox.
+
+  Vamos a ver 3 propiedades para aplicar tamaños relativos a los elementos hijo.
+  Indican como se van a comportar los elementos cuando la pantalla o el contenedor se agranda o encoge.
+
+  - flex-grow: Permite darle, a ese elemento hijo, la proporción de tamaño que él debe crecer
+               cuando se agranda el tamaño de la pantalla.
+               El valor 0 es el valor por defecto, sin crecimiento al agrandar la pantalla.
+  - flex-shrink: Propiedad contrario a flex-grow.
+               Permite darle, a ese elemento hijo, la proporción de tamaño que él debe encoger
+               cuando disminuye el tamaño de la pantalla.
+               El valor 0 es el valor por defecto, sin encoger al disminuir la pantalla.
+  - flex-basis: Es el tamaño base, el mínimo que debe tener el elemento.
+                El valor auto es el valor por defecto.
+
+  ATAJO: Se puede usar la propiedad flex para indicar el grow, el shrink y el basis.
+*/
+
+.flex-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.items:nth-child(1) {
+  background: #21aef0;
+  flex-grow: 0;
+  flex-shrink: 0;
+}
+
+.items:nth-child(2) {
+  background: #21f032;
+  flex-grow: 5;
+  flex-shrink: 10;
+}
+
+.items:nth-child(3) {
+  background: #f08521;
+  flex-grow: 2;
+  flex-shrink: 5;
+  flex-basis: 200px;
+
+  /* ATAJO */
+  flex: 10 20 auto;
+}
+
+.items:nth-child(4) {
+  background: #f02182;
+  flex-grow: 0;
+  flex-shrink: 0;
+}
