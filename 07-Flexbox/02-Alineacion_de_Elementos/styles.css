@@ -1,0 +1,42 @@
+/* ALINEACIONES DE ELEMENTOS CON FLEXBOX */
+
+/* Para poder aplicar alineación a los elementos, tenemos que tener claro el concepto del eje
+   principal y el eje secundario.
+
+   El eje principal se especifica con flex-direction
+   - flex-direction=row: Estamos diciendo que el eje principal es el horizontal (fila) y el eje
+     secundario sería el vertical (columna)
+   - flex-direction=column: Estamos diciendo que el eje principal es el vertical (columna) y el eje
+     secundario sería el horizontal (fila)
+  
+  El por qué hay que tener claro estos conceptos es porque tenemos que aplicar dirección al eje
+  principal y secundario.
+
+  La propiedad justify-content permite mover los elementos dependiendo del eje principal.
+  La propiedad align-items permite mover los elementos dependiendo del eje secundario.
+
+  NOTA: Por tanto, para centrar contenido tanto en el eje X como en el eje Y
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+*/
+
+.flex-container {
+  display: flex;
+  flex-direction: row;
+
+  /* APLICAR DIRECCION AL EJE PRINCIPAL Y SECUNDARIO */
+
+  /* Aplicar al eje principal */
+  justify-content: flex-start; /* Valor por defecto */
+  justify-content: flex-end;
+  justify-content: space-around; /* Separación igual a cada elemento */
+  justify-content: space-between; /* Primer y último elementos pegados al contenedor */
+  justify-content: center;
+
+  /* Aplicar al eje secundario */
+  align-items: flex-start; /* Valor por defecto */
+  align-items: flex-end;
+  align-items: stretch; /* Estira el elemento por el eje secundario (si no tienen tamaño ya asignado) */
+  align-items: center;
+}
