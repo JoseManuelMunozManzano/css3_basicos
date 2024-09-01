@@ -1,0 +1,36 @@
+/* ORDEN DE ELEMENTOS */
+
+/*
+  Continuamos trabajando con los elementos hijo de nuestro Flexbox.
+
+  Vamos a ver un ejemplo para darle orden a nuestros elementos, usando la propiedad order.
+  A esta propiedad hay que indicarle un valor numérico de la posicion que se le quiere dar al elemento.
+  Los que tengan menor valor se colocan al principio y los que tengan mayor valor se colocan al final.
+
+  Es importante indicar que, para que funcione, hay que indicarle el order a todos los elementos hijo.
+  No es correcto indicar el mismo order a dos elementos.
+*/
+
+.flex-container {
+  display: flex;
+}
+
+.items:nth-child(1) {
+  background: #21aef0;
+  order: 3;
+}
+
+.items:nth-child(2) {
+  background: #21f032;
+  order: 4;
+}
+
+.items:nth-child(3) {
+  background: #f08521;
+  order: 1;
+}
+
+.items:nth-child(4) {
+  background: #f02182;
+  order: 2;
+}
