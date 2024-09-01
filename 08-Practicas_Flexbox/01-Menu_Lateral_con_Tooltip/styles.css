@@ -1,0 +1,94 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans',
+    'Helvetica Neue', sans-serif;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  height: 100vh;
+  background: #ffd107;
+}
+
+nav {
+  /* Con esto más adelante podemos trabajarlo */
+  position: relative;
+
+  /* Este es el contenedor nav que contendrá el menú */
+  width: 60px;
+  height: 300px;
+  background: #fff;
+  border-radius: 10px;
+  padding: 5px;
+
+  /* Al contenedor nav también le aplicamos Flexbox para que sus elementos se separen correctamente */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+nav a {
+  position: relative;
+
+  /* Cada uno de los enlaces abarca el 100% del contenedor nav */
+  width: 100%;
+  height: 15%;
+  border-radius: 5px;
+
+  /* Aplicamos Flexbox para centrar cada uno de los span */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  text-decoration: none;
+  color: #0077ff;
+
+  transition: all 0.5s;
+}
+
+nav a:hover {
+  background: #0077ff;
+  color: #fff;
+}
+
+/* Creamos un contenedor al texto que será el tooltip */
+/* Opacidad a 0 porque en estado normal no queremos que se vea */
+.title {
+  position: absolute;
+  left: 45px;
+  background: #fff;
+  padding: 10px 20px;
+  border-radius: 10px;
+  color: #0077ff;
+  font-weight: 600;
+  opacity: 0;
+  transition: all 0.5s;
+}
+
+/* Este es el triangulito (en realidad un rombo) que aparece a la izquierda del tooltip */
+.title::before {
+  content: '';
+  position: absolute;
+  top: 35%;
+  left: -5px;
+  width: 12px;
+  height: 12px;
+  background: #fff;
+  transform: rotate(45deg);
+}
+
+/* Cuando nos posicionemos sobre el enlace, se verá el tooltip */
+/* Además, gracias al left de 65px, hace el efecto de moverse de izquierda a derecha.
+   Esto trabaja junto a .title, propiedades left: 45px y el transition, cuando el efecto
+   de pasar a 45 a 65 es lo que da la sensación de moverse.
+*/
+nav a:hover .title {
+  left: 65px;
+  opacity: 1;
+}
