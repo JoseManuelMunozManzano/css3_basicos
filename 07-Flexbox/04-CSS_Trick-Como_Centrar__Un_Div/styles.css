@@ -1,0 +1,35 @@
+/* COMO CENTRAR UN DIV */
+
+/*
+  Flexbox facilita mucho centrar cualquier tipo de contenido.
+
+  Vamos a ver dos formas para centrar contenido y es importante ver que el elemento que queremos centrar
+  realmente lo centramos desde el elemento padre.
+*/
+
+.container {
+  width: 500px;
+  height: 500px;
+  background: crimson;
+  margin: 50px auto;
+
+  /* El contenido hijo se centra desde el padre */
+  display: flex;
+
+  /* METODO 1 */
+  justify-content: center;
+  align-items: center;
+
+  /* METODO 2 */
+  /* No es popular. Se utiliza sobre todo en Grid Layout, pero también se puede usar en Flexbox */
+  /* Ordena verticalmente. Con esta única propiedad, en Grid Layout, se centra el contenido. */
+  /* place-items: center; */
+  /* Ordena horizontalmente */
+  /* place-content: center; */
+}
+
+.container div {
+  width: 100px;
+  height: 100px;
+  background: #222;
+}
