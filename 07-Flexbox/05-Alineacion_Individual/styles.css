@@ -1,0 +1,27 @@
+/* ALINEACION INDIVIDUAL */
+
+/*
+  Vamos a empezar a trabajar con elementos hijos de nuestro Flexbox.
+
+  Dado un conjunto de elementos a los que se les aplica Flexbox y que están centrados tanto en
+  el eje principal como en el secundario, vamos a ver como dar estilos a un elemento para
+  alinearlo donde yo quiera.
+
+  Se usa la propiedad align-self.
+*/
+
+.flex-container {
+  /* Aplicando Flexbox */
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+}
+
+/* ALINEACIONES ESPECIFICAS A ELEMENTOS HIJO */
+.item2 {
+  align-self: center;
+  align-self: stretch; /* Estira el elemento por el eje secundario (si no tiene tamaño ya asignado) */
+  align-self: flex-start;
+  align-self: flex-end;
+}
