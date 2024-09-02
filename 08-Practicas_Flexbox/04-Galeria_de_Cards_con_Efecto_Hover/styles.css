@@ -1,0 +1,115 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans',
+    'Helvetica Neue', sans-serif;
+}
+
+/* Para poder trabajar mejor, lo primero que vamos a hacer es acceder al .card para darle un tamaño */
+/* Ver primero .card y luego volver aquí arriba */
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #222;
+  height: 100vh;
+}
+
+/* CONTAINER */
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+/* CARD */
+.card {
+  position: relative;
+
+  width: 320px;
+  height: 280px;
+  margin: 15px;
+
+  /* El espacio de la imagen que sobrepase este tamaño se pierde */
+  overflow: hidden;
+
+  box-shadow: 0 5px 10px 5px rgba(0, 0, 0, 0.5);
+}
+
+/* Arreglamos el texto y las imágenes para que vayan y se alineen donde queremos,
+texto arriba e imágenes centradas */
+.img,
+.content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.content {
+  /* No olvidar que para que este centrado del texto funcione, .content tiene
+  que tener un tamaño, en este caso su tamaño es el mismo de la card. */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Fondo blanco creado con pseudoelementos.
+Lo posiciones arriba y a la izquierda y le damos el tamaño igual al del card.
+Luego le damos color blanco. */
+.content::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: #fff;
+
+  /* Aquí le quito el tamaño. Se lo vuelvo a dar al hacer hover en la card */
+  transform: scaleX(0);
+  transition: transform 0.5s;
+  /* La transformación va a finalizarse desde la derecha, no desde el centro */
+  transform-origin: right;
+  transition-delay: 0.5s;
+}
+
+.card:hover .content::before {
+  transform: scaleX(1);
+  /* La transformación va a iniciarse desde la izquierda, no desde el centro */
+  transform-origin: left;
+}
+
+.text {
+  /* Para que el texto aparezca por encima del fondo blanco */
+  z-index: 1;
+  padding: 30px;
+
+  /* Nos llevamos el texto fuera de la card, para que, al hacer hover, acompañe
+  la aparición del fondo blanco. Deja de verse gracias al overflow: hidden de .card */
+  transform: translateX(-300px);
+  transition: all 0.5s;
+}
+
+.card:hover .text {
+  /* Mueve el texto hacia la derecha para que se vuelva a ver */
+  transform: translateX(0px);
+  transition-delay: 0.8s;
+}
+
+.text h3 {
+  font-size: 1.8em;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
