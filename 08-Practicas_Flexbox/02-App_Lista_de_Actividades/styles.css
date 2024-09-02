@@ -1,0 +1,130 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans',
+    'Helvetica Neue', sans-serif;
+}
+
+/* Centramos todo el body */
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #111;
+}
+
+.container {
+  background: #fff;
+  width: 350px;
+}
+
+h2 {
+  background: #03a9f4;
+  color: #fff;
+  font-weight: 600;
+  text-transform: uppercase;
+  padding: 20px;
+}
+
+/* LISTA */
+/* Contenedor de lista tiene el scroll. Le asignamos un tamaño */
+.list {
+  height: 500px;
+
+  /* Con overflow con valor auto, cuando necesitemos un scroll lo va a utilizar */
+  overflow-y: auto;
+}
+
+.list::-webkit-scrollbar {
+  width: 5px;
+}
+
+.list::-webkit-scrollbar-thumb {
+  background: #03a9f4;
+  border-radius: 40px;
+}
+
+/* ITEMS */
+.item {
+  padding: 20px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  transition: all 0.5s;
+}
+
+/* Eliminamos el último border-bottom */
+.item:last-child {
+  border-bottom: none;
+}
+
+.item:hover {
+  background: rgba(0, 0, 0, 0.1);
+}
+
+.item label {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+}
+
+.item p {
+  font-size: 18px;
+  letter-spacing: 1px;
+  font-weight: 400;
+}
+
+/* Hacemos el botón de check usando el span */
+.item span {
+  position: relative;
+  width: 30px;
+  height: 30px;
+  border: 1px solid #8b8b8b;
+  border-radius: 50%;
+
+  /* Esto se hace para que, al crear la V de check al span, este se posicione centrado dentro del mismo */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Creando la V del check */
+.item span::before {
+  content: '';
+  position: absolute;
+  width: 10px;
+  height: 5px;
+  border-left: 2px solid #8b8b8b;
+  border-bottom: 2px solid #8b8b8b;
+  transform: rotate(-40deg);
+}
+
+/* Que no se vea el input */
+.item input {
+  /* Oculta, pero respeta el espacio. No es lo que quiero */
+  /* visibility: hidden; */
+
+  /* Oculta y elimina su espacio. Es lo que quiero */
+  display: none;
+}
+
+/* ESTADOS */
+
+/* Cuando haga check al input, voy a aplicar estos estilos a mi hermano párrafo adyacente */
+.item input:checked ~ p {
+  text-decoration: line-through;
+  color: #ccc;
+  font-weight: 600;
+}
+
+/* Cuando haga check al input, voy a aplicar estos estilos a mi hermano span adyacente */
+.item input:checked ~ span {
+  background: #03a9f4;
+  border: 1px solid #03a9f4;
+}
+
+.item input:checked ~ span::before {
+  border-left: 2px solid #fff;
+  border-bottom: 2px solid #fff;
+}
