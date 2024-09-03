@@ -33,7 +33,6 @@ section::before {
   z-index: 1;
 
   display: flex;
-  background: #fff;
 }
 
 h2 {
@@ -106,4 +105,123 @@ h2 {
 
 .sociales a:hover {
   color: rgba(255, 255, 255, 1);
+}
+
+/* FORM */
+
+.form {
+  /* El form ocupa el espacio del contenedor que quiero */
+  position: absolute;
+  width: calc(100% - 200px);
+  height: 100%;
+  background: #fff;
+  margin-left: 150px;
+
+  /* Posición base de la info del formulario */
+  padding: 70px 50px 70px 250px;
+
+  /* Sombra al contenedor */
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+}
+
+.form h2 {
+  color: #0f3959;
+}
+
+.form-box {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
+  padding-top: 30px;
+}
+
+.input-box {
+  position: relative;
+  margin-bottom: 35px;
+}
+
+/* Tamaño de los elementos */
+.input-box.w50 {
+  /* Doy un poco menos de tamaño para que se separe un poco */
+  width: 48%;
+}
+
+.input-box.w100 {
+  width: 100%;
+}
+
+/* Asignamos tamaño a los input y textarea para que el width de .input-box.w50 y .input-box.w100 funcione */
+.input-box input,
+.input-box textarea {
+  width: 100%;
+  padding: 5px 0;
+  font-size: 18px;
+  color: #333;
+  border: none;
+  border-bottom: 1px solid #777;
+  outline: none;
+
+  /* Para que no cambie el tamaño del textarea */
+  resize: none;
+}
+
+.input-box textarea {
+  /* Para hacer el textarea un poco más grande */
+  min-height: 120px;
+}
+
+/* Colocamos el texto dentro de los input, como si fuera un placeholder */
+.input-box span {
+  position: absolute;
+  left: 0;
+  padding: 5px 0;
+  font-size: 16px;
+  letter-spacing: 1px;
+  color: #888;
+
+  /* Esta propiedad me permite controlar el evento de click en el elemento.
+  Con el valor none indico que el click en span no lo toma en cuenta,
+  con lo que el click se hace realmente en el input, que es lo que quiero */
+  pointer-events: none;
+
+  transition: all 0.5s;
+}
+
+/* Al hacer focus en el input, llevamos el hermano span adyacente arriba */
+/* Con valid, si el input tiene datos, también aplica estos estilos */
+.input-box input:focus ~ span,
+.input-box input:valid ~ span,
+.input-box textarea:focus ~ span,
+.input-box textarea:valid ~ span {
+  transform: translateY(-20px);
+  font-size: 14px;
+  font-weight: 400;
+  letter-spacing: 1px;
+  color: #03a0f4;
+}
+
+.input-box.btn {
+  display: flex;
+  justify-content: flex-end;
+}
+
+/* Solo para el input de tipo submit (el botón) */
+.input-box input[type='submit'] {
+  cursor: pointer;
+  background: #0f3959;
+  text-transform: uppercase;
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  color: #fff;
+  border: none;
+  width: 30%;
+  padding: 12px;
+
+  transition: all 0.5s;
+}
+
+.input-box input[type='submit']:hover {
+  background: #03a9f4;
 }
