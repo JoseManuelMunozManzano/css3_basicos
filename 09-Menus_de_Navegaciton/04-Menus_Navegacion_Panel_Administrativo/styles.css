@@ -155,3 +155,107 @@ header .info-user .container-imagen::after {
   background: #37e920;
   border-radius: 50%;
 }
+
+/* SOCIALES */
+.sociales {
+  /* Queremos que esté al final de forma fija */
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+
+  display: flex;
+}
+
+.sociales .icon {
+  margin: 0 20px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  position: relative;
+  cursor: pointer;
+}
+
+.sociales .icon span {
+  width: 50px;
+  height: 50px;
+  background: #ccc;
+  border-radius: 50%;
+
+  /* Esto se podía haber centrado con flexbox, pero se hace a la manera antigua */
+  text-align: center;
+  line-height: 50px;
+
+  font-size: 20px;
+}
+
+.sociales .icon .tooltip {
+  /* El tooltip me lo llevaré de abajo a arriba */
+  position: absolute;
+  top: 0;
+
+  background: #ccc;
+  padding: 10px 18px;
+  border-radius: 25px;
+  font-weight: 600;
+
+  /* Para que no se vea el tooltip hasta que se haga hover */
+  opacity: 0;
+  transition: all 0.5s;
+
+  /* Para evitar que tenga el error del hover sobre el tooltip */
+  pointer-events: none;
+}
+
+.sociales .icon:hover .tooltip {
+  top: -60px;
+
+  /* Para que se vea el tooltip al hacer hover */
+  opacity: 1;
+}
+
+/* Flecha del tooltip (es un rombo) */
+.sociales .icon .tooltip::before {
+  content: '';
+  position: absolute;
+  bottom: -8px;
+  left: 50%;
+  width: 15px;
+  height: 15px;
+  background: #ccc;
+
+  /* Para que lo termine de centrar y lo rote */
+  transform: translateX(-50%) rotate(45deg);
+
+  transition: all 0.5s;
+}
+
+.sociales .facebook:hover span,
+.sociales .facebook:hover .tooltip,
+.sociales .facebook:hover .tooltip::before {
+  background: #3b5999;
+  color: #fff;
+}
+
+.sociales .twitter:hover span,
+.sociales .twitter:hover .tooltip,
+.sociales .twitter:hover .tooltip::before {
+  background: #46c1f6;
+  color: #fff;
+}
+
+.sociales .instagram:hover span,
+.sociales .instagram:hover .tooltip,
+.sociales .instagram:hover .tooltip::before {
+  background: #e1306c;
+  color: #fff;
+}
+
+.sociales .youtube:hover span,
+.sociales .youtube:hover .tooltip,
+.sociales .youtube:hover .tooltip::before {
+  background: #dc3545;
+  color: #fff;
+}
