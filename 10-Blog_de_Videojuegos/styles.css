@@ -22,6 +22,45 @@ a {
   text-decoration: none;
 }
 
+/* El .btn y el .badge no están asociadas a ningún elemento porque son
+clases generales que pueden reutilizarse.
+Dejo preparado un transition por si quiero aplicarlo en clases concretas. */
+.btn {
+  width: 200px;
+  height: 40px;
+  border: none;
+  border-radius: 5px;
+  background: var(--color-secundario);
+  color: #fff;
+  font-size: 14px;
+  font-weight: 600;
+  text-transform: uppercase;
+
+  /* Para centrar el texto en el componente creado arriba */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  cursor: pointer;
+  transition: all 0.5s;
+}
+
+.btn:hover {
+  background: #0874b8;
+}
+
+.badge {
+  background: var(--color-principal);
+  color: #fff;
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  border-radius: 20px;
+  padding: 5px 15px;
+  cursor: default;
+  transition: all 0.5s;
+}
+
 /** MENU SOCIALES */
 .nav-sociales {
   width: 100%;
@@ -131,4 +170,54 @@ a {
 
 .nav-principal .enlaces a:nth-child(3):hover {
   background: var(--color-secundario);
+}
+
+/** HEADER */
+header {
+  width: 100%;
+  /* Entre menú sociales, menú principal y paddings, más o menos son 95px */
+  /* Restando esa cantidad evito que aparezca scroll */
+  height: calc(100vh - 95px);
+
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+
+  padding-left: 50px;
+}
+
+header .imagen-header {
+  width: 60%;
+  height: 100%;
+
+  background: url(img/game1.png);
+  background-size: cover;
+  background-position: center;
+
+  /* Para que se vea de forma circular y posicionando el trozo de
+  la imagen que queremos que aparezca */
+  /* Para que sea responsive, hay que usar un SVG, así que este PNG no
+  es realmente responsive y solo se ve bien a pantalla completa */
+  clip-path: circle(90% at 92% 50%);
+  z-index: 2;
+  transition: all 0.5s;
+}
+
+header .content-header {
+  /* Disminuimos el tamaño del texto para que la imagen abarque más */
+  width: 50%;
+}
+
+/* El * indica a todos los elementos */
+header .content-header * {
+  margin: 10px 0;
+}
+
+header .content-header h3 {
+  font-size: 65px;
+  font-weight: 300;
+}
+
+header .content-header P {
+  font-size: 19px;
 }
