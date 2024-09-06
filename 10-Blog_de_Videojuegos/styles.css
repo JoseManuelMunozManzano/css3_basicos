@@ -221,3 +221,113 @@ header .content-header h3 {
 header .content-header P {
   font-size: 19px;
 }
+
+/** DESTACADOS */
+.destacados {
+  position: relative;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  /* Respeta el tamaño y se posiciona en distintas filas */
+  flex-wrap: wrap;
+}
+
+/* También vale ::after */
+.destacados::before {
+  content: 'Destacados';
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 600;
+  font-size: 12em;
+  color: rgba(0, 0, 0, 0.07);
+}
+
+.game {
+  position: relative;
+  width: 45%;
+  height: 350px;
+  margin: 40px 20px;
+
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+
+  transition: all 0.5s;
+}
+
+.game:nth-child(1) {
+  background: linear-gradient(45deg, #10214c, #da3dbe);
+}
+
+.game:nth-child(2) {
+  background: linear-gradient(45deg, #1a2f3f, #7094ce);
+}
+
+.game:nth-child(3) {
+  background: linear-gradient(45deg, #000, #1c78b2);
+}
+
+.game:nth-child(4) {
+  background: linear-gradient(45deg, #0e2b2f, #00ffff);
+}
+
+.game img {
+  /* Al indicar un position absolute la imagen se pone encima del texto, que es
+  lo que quiero */
+  position: absolute;
+
+  /* Centrar y que la imagen sobresalga del contenedor */
+  left: 50%;
+  bottom: 0;
+  transform: translate(-50%);
+  height: 380px;
+  z-index: 1;
+
+  transition: all 0.5s;
+
+  /* Evitar el problema del parpadeo en el hover */
+  pointer-events: none;
+}
+
+.game:hover img {
+  left: 75%;
+
+  /* Lo hacemos más grande y sale del contenedor */
+  height: 400px;
+}
+
+.game .content {
+  position: relative;
+  width: 50%;
+  left: 20%;
+  padding: 20px 20px 20px 40px;
+  color: #fff;
+  opacity: 0;
+
+  transition: all 0.5s;
+}
+
+.game:hover .content {
+  left: 0;
+  opacity: 1;
+}
+
+.game .content h2 {
+  text-transform: uppercase;
+  font-size: 2.2em;
+  line-height: 1em;
+}
+
+.game .content a {
+  position: relative;
+  color: #000;
+  background: #fff;
+  display: inline-block;
+  padding: 10px 20px;
+  margin-top: 10px;
+  font-weight: 700;
+}
