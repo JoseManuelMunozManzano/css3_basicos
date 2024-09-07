@@ -446,6 +446,17 @@ header .content-header P {
 /*? Menú lateral */
 aside {
   width: 50%;
+  /* La idea clave aquí es: height: 100% significa “tan alto como todas las cosas dentro de mí”,
+     no “tan alto como todas las cosas dentro de las cuales estoy”.
+
+    Por eso width: 100% hace lo que mucha gente espera naturalmente: ocupa todo el ancho de la
+    pantalla, mientras que height: 100% no hace lo que la gente suele esperar y ocupa toda la
+    altura de la pantalla.
+
+    De nuevo, width mira hacia afuera mientras height mira hacia adentro.
+
+    Ver: https://www.youtube.com/watch?v=Xt1Cw4qM3Ec
+  */
   height: 100%;
   background: var(--color-secundario);
   box-shadow: 0 0 10px 0 var(--color-secundario);
