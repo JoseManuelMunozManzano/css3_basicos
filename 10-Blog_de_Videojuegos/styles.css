@@ -509,3 +509,22 @@ aside nav a:hover {
   /* transform: scale(1.1) rotate(5deg); */
   transform: scale(1.1);
 }
+
+/** FOOTER COPYRIGHT */
+footer {
+  width: 100%;
+  height: 40px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background: #581abd;
+}
+
+footer p {
+  font-size: 14px;
+  font-style: italic;
+  color: #fff;
+  opacity: 0.5;
+}
