@@ -220,7 +220,8 @@ nav .iconos img {
   top: 0;
   left: 0;
   width: 100%;
-  /* En vez del 100% pongo 99% porque si no se ve una franja gris debajo de la imagen, debido a que el alto del contenedor al 100% es más grande que container-img */
+  /* En vez del 100% pongo 99% porque si no se ve una franja gris debajo de la
+  imagen, debido a que el alto del contenedor al 100% es más grande que container-img */
   height: 99%;
 
   background-color: rgba(0, 0, 0, 0.4);
@@ -234,6 +235,105 @@ nav .iconos img {
   border-radius: 16px;
 }
 
+/*? Hover de post */
+
 .container-img div {
-  display: none;
+  /* Como .container-img tiene un position: relative, ahora puedo posicionar
+  los div donde quiera dentro de ese contenedor */
+  position: absolute;
+  width: 100%;
+
+  display: flex;
+  padding: 15px;
+
+  opacity: 0;
+  transition: all 0.2s;
+}
+
+.container-img:hover div {
+  opacity: 1;
+}
+
+/* Posicionamos */
+.container-img .top-row {
+  top: 0;
+  left: 0;
+
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+/* Aplicamos estilos */
+.container-img .top-row a:not(.btn) {
+  color: #fff;
+  font-weight: 700;
+  width: 40%;
+  height: 100%;
+
+  /* Para que el texto no continue si no cabe. Ejemplo: p... */
+  /* Esto tiene mucho sentido cuando nuestra web es responsive */
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+}
+
+.container-img .top-row span {
+  color: #fff;
+  align-self: center;
+  padding-right: 5px;
+  font-size: 14px;
+}
+
+.container-img .top-row .btn {
+  background: var(--rojo100);
+  height: 45px;
+  min-width: 93px;
+}
+
+.container-img .top-row .btn:hover {
+  background: var(--rojoHover);
+}
+
+/* Posicionamos */
+.container-img .bottom-row {
+  bottom: 0;
+  left: 0;
+  height: 64px;
+
+  justify-content: space-between;
+}
+
+/* Aplicamos estilos */
+.container-img .bottom-row a {
+  background: var(--gris100);
+  border-radius: 20px;
+
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+
+  color: var(--gris400);
+  font-weight: 700;
+  font-size: 0.9em;
+}
+
+.container-img .bottom-row a:nth-child(1) {
+  width: 62%;
+  height: 100%;
+
+  /* Si el texto es muy largo, no se verá */
+  overflow: hidden;
+}
+
+.container-img .bottom-row a:nth-child(1) span {
+  padding: 0 8px;
+  transform: rotate(45deg);
+  font-size: 12px;
+}
+
+.container-img .bottom-row a:nth-child(2),
+.container-img .bottom-row a:nth-child(3) {
+  width: 32px;
+  justify-content: center;
 }
