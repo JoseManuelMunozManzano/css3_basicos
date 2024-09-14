@@ -337,3 +337,51 @@ nav .iconos img {
   width: 32px;
   justify-content: center;
 }
+
+/*? Información de post */
+.info-img {
+  display: flex;
+  flex-direction: column;
+  padding: 5px 10px;
+}
+
+.info-img .info {
+  display: flex;
+  align-items: center;
+}
+
+.info-img .info img {
+  width: 32px;
+  height: 32px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.info-img .info a {
+  font-size: 14px;
+  color: var(--gris400);
+  padding: 0 5px;
+}
+
+.info-img .info a:hover {
+  text-decoration: underline;
+}
+
+.reactions {
+  display: flex;
+  align-items: center;
+  margin: 5px 0;
+  cursor: pointer;
+}
+
+.reactions img {
+  width: 16px;
+  height: 16px;
+  margin-right: 1px;
+}
+
+.reactions span {
+  font-size: 14px;
+  margin-left: 5px;
+  color: var(--gris400);
+}
