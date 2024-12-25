@@ -1,0 +1,34 @@
+/** ALINEACION MULTILINEA  */
+/* Es una alineación de elementos en grupo, no del interior del elemento, sino de todo el grupo.
+   Es decir, sobre un height de 1000px, los elementos se alinean en ese espacio.
+*/
+
+.grid {
+  display: grid;
+  gap: 20px;
+  height: 1000px;
+  grid-template-columns: repeat(3, 200px);
+  grid-template-rows: repeat(3, 200px);
+
+  /** Alinear de forma horizontal */
+  /* Se utiliza la propiedad justify-content para alinear todos los elementos.
+    space-evenly da un mismo espacio de separación entre todos los elementos.
+  */
+  justify-content: center;
+  justify-content: start;
+  justify-content: end;
+  justify-content: space-around;
+  justify-content: space-between;
+  justify-content: space-evenly;
+  
+  /** Alinear de forma vertical */
+  /* Se utiliza la propiedad align-content para alinear todos los elementos. 
+     El contenedor debe tener un height definido.
+  */
+  align-content: center;
+  align-content: end;
+  align-content: start;
+  align-content: space-around;
+  align-content: space-between;
+  align-content: space-evenly;
+}

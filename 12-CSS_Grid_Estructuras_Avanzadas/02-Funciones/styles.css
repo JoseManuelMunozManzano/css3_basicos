@@ -1,0 +1,28 @@
+/** FUNCIONES  */
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 200px 200px 200px 200px;
+  gap: 20px;
+
+  /** FUNCION REPEAT */
+  /* Facilita la codificación cuando hay muchas filas/columnas.
+     En vez de indicar una a una cada fila/columna, se usa esta función para repetir valores.
+     El primer valor es el número de filas/columnas y el segundo es el valor específico.
+
+     Si no todas las columnas son iguales, se puede hacer esto:
+       grid-template-columns: repeat(3, 1fr) 2fr;
+     Donde la cuarta columna tiene un valor 2fr.
+  */
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(4, 200px);
+
+  /** FUNCION MINMAX */
+  /* Permite establecer un rango de valores para las columnas.
+     El primer valor es el mínimo y el segundo es el máximo.
+     Si el contenido es menor al mínimo, la columna se ajusta al contenido. Es decir, lo más pequeño que se puede hacer es de 300px.
+     Si el contenido es mayor al máximo, la columna se ajusta al máximo. Es decir, lo más grande que se puede hacer es de 800px.
+  */
+  grid-template-columns: minmax(300px, 800px) 1fr 1fr;
+}

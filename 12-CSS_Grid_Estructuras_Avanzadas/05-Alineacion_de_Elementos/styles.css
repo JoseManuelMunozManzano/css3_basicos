@@ -1,0 +1,39 @@
+/** ALINEACION DE ELEMENTOS */
+/* Vamos a ver como alinear elementos tanto en el eje vertical como en el horizontal.
+   Se usan propiedades muy similares a las vistas en Flexbox.
+*/
+
+.grid {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 200px);
+
+  /** Alineacion horizontal */
+  /* Utilizamos la propiedad justify-items.
+     El valor auto es el mismo que center.
+     El valor por defecto es stretch, donde el elemento ocupa todo su espacio.
+  */
+  justify-items: start;
+  justify-items: end;
+  justify-items: center;
+  justify-items: auto;
+  justify-items: stretch;
+
+  /** Alineacion vertical */
+  /* Utilizamos la propiedad align-items.
+     El valor por defecto es stretch, donde el elemento ocupa todo su espacio.
+  */
+  align-items: start;
+  align-items: end;
+  align-items: center;
+  align-items: stretch;
+}
+
+/** Alinear elementos individuales */
+/* Utilizamos la propiedad justify-self para alineación horizontal y align-self para alineación vertical. */
+.grid .item {
+  background: violet;
+  justify-self: center;
+  align-self: center;
+}

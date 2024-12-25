@@ -1,0 +1,83 @@
+/** GRID AREAS */
+/* Nos permite maquetar nuestro contenido de forma mucho más sencilla, creando una plantilla.
+   Luego les decimos a los elementos donde queremos que se ubiquen.
+
+   La ventaja que tiene esto es que es muy fácil cambiar la estructura de la página, simplemente cambiando la plantilla.
+*/
+
+.grid {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(5, 1fr);
+
+  /* Usando grid-area */
+  /* Esta es la plantilla. Indicamos las areas, que son:
+     La primera fila va a estar ocupada enteramente por el header, y ocupará 3 columnas.
+     La segunda fila va a estar ocupada por el contenido, que ocupará 2 columnas, y el aside que ocupará 1 columna.
+     La tercera fila va a estar ocupada por el contenido, que ocupará 2 columnas, y el aside que ocupará 1 columna.
+     La cuarta fila va a estar ocupada por el widget1, ocupando una columna, el widget 2, que ocupará otra columna, y el aside que ocupará la última columna.
+     La quinta fila va a estar ocupada por el footer, que ocupará las 3 columnas.
+
+     Los nombres son arbitrarios, pero deben coincidir con el nombre que se indique en grid-area.
+  */
+  grid-template-areas:
+    'header       header         header'
+    'contenido    contenido      aside'
+    'contenido    contenido      aside'
+    'widget1      widget2        aside'
+    'footer       footer         footer';
+}
+
+.grid .header {
+  background-color: gray;
+
+  /* Forma sin usar grid-area */
+  /* grid-column: span 3; */
+
+  /* Usando grid-area */
+  grid-area: header;
+}
+
+.grid .aside {
+  background-color: orange;
+
+  /* Forma sin usar grid-area */
+  /* grid-column: 3 / 4;
+  grid-row: 2 / 5; */
+  
+  /* Usando grid-area */
+  grid-area: aside;
+}
+
+.grid .contenido {
+  background-color: #fff;
+  color: #000;
+  border: none;
+  
+  /* Forma sin usar grid-area */
+  /* grid-column: span 2;
+  grid-row: span 2; */
+  
+  /* Usando grid-area */
+  grid-area: contenido;
+}
+
+.grid .widget1 {
+  background-color: greenyellow;
+  grid-area: widget1;
+}
+
+.grid .widget2 {
+  background-color: greenyellow;
+  grid-area: widget2;
+}
+
+.grid .footer {
+  background-color: #3a3a3a;
+  /* Forma sin usar grid-area */
+  /* grid-column: span 3; */
+  
+  /* Usando grid-area */
+  grid-area: footer;
+}

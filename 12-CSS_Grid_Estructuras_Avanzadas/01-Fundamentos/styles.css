@@ -1,0 +1,33 @@
+/** FUNDAMENTOS */
+
+.grid {
+  /** PASO 1: DISPLAY GRID */
+  display: grid;
+
+  /** PASO 2: DEFINIR FILAS Y COLUMNAS */
+  /* Indicamos un tamaño a cada columna/fila
+     Se podría indicar con píxeles, por ejemplo:
+      grid-template-columns: 200px 100px 300px;
+     Donde indicamos que la primera columna tendrá un tamaño de 200px, la segunda de 100px y la tercera de 300px.
+      grid-template-rows: 200px 100px 500px;
+     La cuarta fila que tiene mi ejemplo se creará automáticamente con el tamaño que quede libre.
+
+     También se puede trabajar con porcentajes.
+
+     Pero para definir columnas/filas es buena práctica usar la fracción (fr)
+     Permite repartir el espacio disponible.
+  */
+  grid-template-columns: 1fr 3fr 1fr;
+  grid-template-rows: 1fr 3fr 1fr;
+
+  /** PASO 3: FILAS Y COLUMNAS EN UNICA LINEA DE CODIGO - OPCIONAL */
+  /* Primero se indican los rows y luego las columns.
+     En el ejemplo, se indica que habrá al menos 3 filas donde la primera y la tercera tendrán un tamaño de 1fr y la segunda de 3fr.
+     Y tendrá dos columnas con un tamaño de 1fr cada una.
+  */
+  grid-template: 1fr 3fr 1fr / 1fr 1fr;
+
+  /** PASO 4: ESTABLECER SEPARACION - OPCIONAL */
+  /* Antes se llamaba grid-gap, pero está obsoleta y ahora se usa gap */
+  gap: 50px;
+}

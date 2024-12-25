@@ -1,0 +1,35 @@
+/** AUTO-FIT Y AUTO-FILL */
+/* Nos permiten crear columnas de forma dinámica. Están muy pensadas para responsive. */
+
+.auto-fit div {
+  background-color: violet;
+}
+
+.grid {
+  display: grid;
+  gap: 20px;
+}
+
+/** Autofill */
+.auto-fill {
+  /* Si en vez de indicar un número concreto de columnas:
+     
+      grid-template-columns: repeat(4, minmax(100px, 1fr));
+
+    Indicamos auto-fill, el grid se adaptará al tamaño del contenedor y creará las columnas que quepan en él, dejando espacios vacíos.
+
+    En mi ejemplo creamos 5 columnas, pero se está generando de forma dinámica más columnas (ver con el inspector de elementos) que quedan vacías. 
+  */
+  grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+}
+
+/** AutoFit */
+.auto-fit {
+  /* Si en vez de indicar un número concreto de columnas:
+     
+      grid-template-columns: repeat(4, minmax(100px, 1fr));
+
+    Indicamos auto-fit, mis contenedores se adaptan al contenedor padre, sin dejar espacios vacíos.
+  */
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+}

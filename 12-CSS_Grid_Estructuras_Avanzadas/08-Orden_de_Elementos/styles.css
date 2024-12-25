@@ -1,0 +1,27 @@
+/** ORDEN DE ELEMENTOS */
+/* Les aplicamos un orden a los elementos con valor 3 y 5.
+   Se usa la propiedad order, al igual que en flexbox.
+*/
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.grid div {
+  /* Así se ubican exactamente donde están. */
+  order: 0;
+}
+
+.grid .item {
+  background: violet;
+  /* Se indica el valor -1 para que se coloque antes de todos los demás elementos, que tienen valor 0. */
+  order: -1;
+}
+
+.grid .item2 {
+  background: lightseagreen;
+  /* Con valor -1 se situa detrás del elemento con valor 3, ya que el elemento con valor 3 esta antes. */
+  order: -1;
+}

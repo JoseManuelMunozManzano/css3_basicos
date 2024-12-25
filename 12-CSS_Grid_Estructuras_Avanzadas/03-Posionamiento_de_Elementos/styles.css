@@ -1,0 +1,50 @@
+/** POSICIONAMIENTO DE ELEMENTOS  */
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.grid .item {
+  background-color: violet;
+
+  /** POSICIONAR ELEMENTOS */
+  /* Podemos ver estos números en el inspector de elementos, al pulsar sobre el simbolo grid.
+     El índice de las columnas/filas empieza en 1 y llega hasta el número de columnas/filas + 1.
+     Por ejemplo, para 3 filas, el índice va de 1 a 4.
+
+     En este ejemplo indicamos que el elemento se posicione en la columna 1 y termine en la -1,
+     que es lo mismo que decir, la última (5). El elemento se expande.
+
+     Y para las filas, empieza en la 2 y termina en la 3 (no incluida).
+  */
+  grid-column-start: 1;
+  grid-column-end: -1;
+  grid-row-start: 2;
+  grid-row-end: 3;
+
+  /** ATAJO 1: Valores de start y end */
+  /* Forma recomendada. */
+  grid-column: 1 / -1;
+  grid-row: 3 / 4;
+
+  /** ATAJO 2 
+      -Primer parametro row start
+	    -Segundo parametro column start
+	    -Tercer parametro row end
+	    -Cuarto parametro column end
+
+      Puede ser un poco confuso.
+  */
+  grid-area: 3 / 2 / 5 / -1;
+
+  /** ATAJO 3: EXPANDIR COLUMNAS Y FILAS */
+  /* Indica como se expande el elemento, en vez de en que columna/fila se situa.
+     En este caso, los valores empiezan en 1 y acaban en el número de columnas/filas que haya,
+     en este caso 4 columnas y 4 filas.
+  */
+  grid-column: span 3;
+  grid-row: span 3;
+}

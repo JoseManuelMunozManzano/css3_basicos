@@ -1,0 +1,55 @@
+/** GRID IMPLICITA Y EXPLICITA */
+
+.grid {
+  display: grid;
+  gap: 20px;
+  /** GRID EXPLICITA */
+  /* Es el grid que especifico. En este caso 3 columnas y 3 filas constituyen mi grid explícita. */
+  grid-template-columns: 100px 1fr 100px;
+  grid-template-rows: 100px 200px 100px;
+  
+  /** GRID IMPLICITA */
+  /* Como tengo muchos elementos, 21 en total, la grid amplía sus filas, convirtiéndose en una grid implícita.
+     Las filas de la 4 a la 7 constituye mi grid implícita.
+
+     Para trabajar con las filas/columnas que están fuera de mi grid explícita, hay dos pasos:
+     1. Dar tamaño a la grid implícita, usaando las propiedades grid-auto-rows o grid-auto-columns (en función de la dirección!).
+
+     Probar también:
+      grid-auto-rows: 500px;
+      grid-auto-columns: 300px;
+  */
+  grid-auto-rows: 1fr;
+  grid-auto-columns: 1fr;
+
+  /** Especifico direccion */
+  /* 2. Darle dirección. 
+        Se usa la propiedad grid-auto-flow para indicar que sea una dirección en fila (row) o en columna (column).
+
+        Si indicamos column, entonces la grid implícita vendrá por las columnas, porque estamos indicando
+        que la dirección se despliegue en forma de columna. La grid crecerá en forma horizontal.
+        Hay que especificar esta dirección antes de poder indicar grid-auto-columns.
+
+            grid-auto-flow: column;
+        
+        Si indicamos row, entonces la grid implícita vendrá por las filas, porque estamos indicando
+        que la dirección se despliegue en forma de fila. La grid crecerá en forma vertical.
+        Hay que especificar esta dirección antes de poder indicar grid-auto-rows.
+
+            grid-auto-flow: row;
+
+        Se usa dense para que los elementos se acoplen y no queden espacios vacíos.
+  */
+  grid-auto-flow: row dense;
+}
+
+/** Expandir diferentes hijos  */
+.grid .expand2 {
+  grid-column: span 2;
+  background: lightseagreen;
+}
+
+.grid .expand3 {
+  grid-column: span 3;
+  background: violet;
+}

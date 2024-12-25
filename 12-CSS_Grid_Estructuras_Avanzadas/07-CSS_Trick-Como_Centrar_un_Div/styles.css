@@ -1,0 +1,39 @@
+/** CSS TRICK - COMO CENTRAR UN DIV */
+/* Estas son las tres formas definitivas de como se puede centrar un contenido con CSS 3 */
+
+.container {
+  width: 500px;
+  height: 500px;
+  background: crimson;
+  margin: 50px auto;
+
+  /** METODO 1 FLEXBOX */
+  /* El método más popular de todos.
+     La idea principal es que Flexbox sea para alinear elementos, para crear cajas con padres flexibles,
+     y poder manipular la posición de esos elementos.
+  */  
+  /* display: flex;
+  justify-content: center;
+  align-items: center; */
+
+  /** METODO 2 GRID */
+  /* La idea principal es que Grid es para maquetar o estructurar una página web, pero también se pueden centrar y alinear elementos. */
+  /* display: grid;
+  justify-content: center;
+  align-content: center; */
+
+  /** METODO 3 GRID */
+  /* Esta forma de centrado es más nueva y solo se necesita una línea de CSS para ello. */
+  display: grid;
+  place-items: center;
+  /* También se puede usar esta propiedad para mover el elemento, por ejemplo:
+        place-items: center end;
+        place-items: end start;
+  */
+}
+
+.container div {
+  width: 100px;
+  height: 100px;
+  background: #222;
+}

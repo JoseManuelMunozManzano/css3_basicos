@@ -1,0 +1,129 @@
+/** SUB GRID  */
+/* En este ejemplo tenemos diferentes cards, que son posts de diferentes usuarios.
+   El problema que tiene este diseño es que los títulos y los botones de cada clase post no están alineados.
+   Estas cards no están alineadas ni de forma horizontal ni vertical (botones con tamaño diferente).
+
+   Con subgrid podemos coger la grid del elemento padre y aplicarla en los hijos.
+*/
+
+/* Nota: Los números que aparecen en los comentarios indican que esas operaciones van juntas. */
+
+/** GENERALES */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+body {
+  background: #cccccc;
+  padding: 40px 0;
+}
+
+.contenedor {
+  width: 90%;
+  margin: auto;
+}
+
+.title {
+  color: #007ac0;
+  font-size: 25px;
+  padding: 20px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+
+  /* 2. Con esto arreglamos el título */
+  grid-column: span 3;
+}
+
+.text {
+  line-height: 20px;
+  padding: 20px;
+  color: #111;
+
+  /* 2. Con esto arreglamos el texto */
+  grid-column: span 3;
+}
+
+button {
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+button.more {
+  background: #007ac0;
+}
+
+button.web {
+  background: #00c070;
+}
+
+button.follow {
+  background: #8a00c0;
+}
+
+/** CONTENEDOR GRID */
+.grid-container {
+  display: grid;
+  /* Las columnas se informan y las filas se generan automáticamente. */
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+
+  /* 1. Dando tamaño a una fila */
+  grid-template-rows: repeat(1, auto 1fr auto);
+
+  /* 2. Esta operación es para indicar las columnas de botones, título y texto.
+        Indicamos que vamos a tener 6 columnas.
+  */
+  grid-template-columns: repeat(6, 1fr);
+}
+
+/** POST */
+.post {
+  background: #fff;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
+
+  display: grid;
+  grid-row: span 3;
+  /* 1. Esta línea de código se pone por si el navegador no soporta la línea siguiente con el subgrid.
+     Si el navegador lo soporta, no haría falta.
+     Es el estilo de grid que se quiere aplicar.
+  */
+  grid-template-rows: repeat(1, 100px 1fr auto);
+  /* 1. Esta propiedad de subgrid está permitiendo traer a los elementos hijos este valor que está en la clase .grid-container
+        grid-template-rows: repeat(1, auto 1fr auto);
+     
+     El subgrid aplica los estilos del contenedor padre.
+     El subgrid lo que va a permitir es adaptar a esa grid el esquema de grid de mi contenedor padre.
+     Es decir, vamos a tener una grid dentro de otra grid, y esa grid hijo adapta a esa grid que tiene el contenedor padre.
+  */
+  grid-template-rows: subgrid;
+
+  /* 2. Esta operación es para las columas del contenedor.
+        De las 6 columnas que tenemos, cada post se expande a 3 columnas.
+  */
+  grid-column: span 3;
+  grid-template-columns: subgrid;
+}
+
+/** BOTONES */
+.post .btn {
+  border-top: 1px solid rgba(0, 0, 0, 0.2);
+  padding: 20px;
+
+  /* 2. Con esto alineamos todos los botones, porque estamos diciendo al contenedor de botones
+     que utilice ese esquema de subgrid que tiene el contenedor padre.
+  */
+  display: grid;
+  /* 2. Esta línea de código se pone por si el navegador no soporta la línea siguiente con el subgrid. 
+        Es el estilo de grid que se quiere aplicar.
+  */
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: subgrid;
+  grid-column: span 3;
+}
