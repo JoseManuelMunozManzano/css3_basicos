@@ -1,0 +1,112 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans',
+    'Helvetica Neue', sans-serif;
+  color: #fff;
+}
+
+body {
+  display: grid;
+
+  /* En lugar de centrarlo, vamos a tirar el footer al final.
+     Son necesarias estas tres propiedades.
+  */
+  justify-content: end;
+  align-content: end;
+  min-height: 100vh;
+}
+
+/* Seteamos los estilos de todos los enlaces */
+a {
+  text-decoration: none;
+  /* Para que respeten los tamaños, pero en este ejemplo parece que si se quita no pasa nada. */
+  display: inline-block;
+}
+
+a:hover {
+  color: #4DACFA;
+}
+
+footer {
+  background: #222;
+  padding: 50px 100px;
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr;
+  gap: 20px;
+}
+
+footer h2 {
+  color: #ccc;
+  font-weight: 400;
+  letter-spacing: 1px;
+  margin: 15px 0;
+}
+
+/** NOSOTROS  */
+
+/* Para los iconos de la parte sociales vamos a crear una grid interna.
+   Esto se puede hacer perfectamente con Flexbox también */
+.sociales {
+  margin: 10px 0;
+  display: grid;
+  grid-template-columns: repeat(5, 50px);
+  gap: 10px;
+}
+
+.sociales a {
+  width: 50px;
+  height: 50px;
+  background: #555;
+  color: #fff;
+  font-size: 20px;
+  border-radius: 5px;
+
+  /* Centramos los iconos en su div usando FlexBox */
+  /* display: flex;
+  justify-content: center;
+  align-items: center; */
+
+  /* Centramos los iconos en su div usando Grid */
+  display: grid;
+  place-items: center;
+
+  transition: all .5s;
+}
+
+.sociales a:hover {
+  background: #333;
+}
+
+/** ENLACES */
+
+li {
+  list-style: none;
+  margin: 10px 0;
+}
+
+/** CONTACTO */
+
+/* A cada div le asignamos un grid de 2 columnas, una para el icono y otra para el texto */
+.contacto div {
+  display: grid;
+  grid-template-columns: 30px 1fr;
+  margin: 15px 0;
+}
+
+/** COPYRIGHT  */
+
+.copy {
+  background: #111;
+  height: 50px;
+
+  /* Centrado con Flexbox */
+  /* display: flex;
+  justify-content: center;
+  align-items: center; */
+
+  /* Centrado con Grid */
+  display: grid;
+  place-items: center;
+}
