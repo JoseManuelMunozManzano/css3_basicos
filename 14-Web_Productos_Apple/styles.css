@@ -62,8 +62,15 @@ section {
   height: 100vh;
 }
 
+.text-container {
+  /* Más abajo, en los estilos de .grid div {} usamos flexbox.
+     Lo distribuimos en columnas. */
+  flex-direction: column;
+}
+
 /** ESTILOS GRID */
 /* Vamos a trabajar con una grid de 12 columnas, cosa que es muy común para poder situar los elementos de una forma cómoda */
+/* En cada sección iremos editando ciertos estilos para dejar el diseño como queramos. */
 
 .grid {
   display: grid;
@@ -74,7 +81,7 @@ section {
   height: 100%;
 }
 
-/* Los elementos dentro del grid (los hijos) van a tener una disposición flex */
+/* Los elementos dentro del grid (los hijos) van a tener una disposición flex. Con eso podemos bajarlos (dirección de column), etc. */
 .grid div {
   display: flex;
   justify-content: center;
@@ -101,6 +108,7 @@ section {
 .span12 {
   grid-column: span 12;
 }
+
 /** MENU DE NAVEGACION */
 
 nav {
@@ -151,4 +159,30 @@ nav .enlaces a {
 
 nav .enlaces a:hover {
   opacity: 1;
+}
+
+/** HEADER */
+
+header {
+  width: 100%;
+  /* 44px porque el nav tiene un height de 44px. Así evito que me aparezca el scroll */
+  height: calc(100vh - 44px);
+  margin: 44px 0 0 0;
+  background: #F2F2F2;
+}
+
+header img {
+  width: 85%;
+}
+
+/* Recordar que aquí estamos usando flexbox */
+header .text-container {
+  padding: 30px 0 0 0;
+  justify-content: flex-end !important;
+}
+
+/* Recordar que aquí estamos usando flexbox */
+header .img-container {
+  /* Bajamos la imagen hasta la parte inferior de la página web */
+  align-items: flex-end !important;
 }
