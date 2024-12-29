@@ -68,6 +68,16 @@ section {
   flex-direction: column;
 }
 
+.enlace-info {
+  font-size: 21px;
+  margin-top: 30px;
+  color: var(--color-enlaces)
+}
+
+.enlace-info:hover {
+  text-decoration: underline;
+}
+
 /** ESTILOS GRID */
 /* Vamos a trabajar con una grid de 12 columnas, cosa que es muy común para poder situar los elementos de una forma cómoda */
 /* En cada sección iremos editando ciertos estilos para dejar el diseño como queramos. */
@@ -239,4 +249,43 @@ header .img-container {
   color: #FFF;
   font-size: 28px;
   font-weight: 400;
+}
+
+/** PRODUCTOS */
+
+/*? IPAD */
+
+.ipad {
+  background: #FFF;
+}
+
+.ipad img {
+  height: 85%;
+  object-fit: cover;
+  object-position: left;
+}
+
+.ipad .text-container {
+  /* Empieza en la columna 2 y termina en la 4 */
+  grid-column: 2 / 4;
+  /* Como el padre tiene flexbox, lo usamos para posicional el elemento al comienzo */
+  align-items: flex-start;
+}
+
+/*? WATCH */
+
+.watch {
+  padding: 30px 50px 0 50px;
+}
+
+.watch .text-container img {
+  width: 100px;
+}
+
+/*? AIRPODS */
+
+.airpods {
+  /* La sección tiene un height de 100vh y aquí le estamos diciendo que sea automático.
+     Esto es porque 100vh es demasiado grande, y con auto indicamos que el height del contenedor sea lo que ocupan sus hijos. */
+  height: auto;
 }
