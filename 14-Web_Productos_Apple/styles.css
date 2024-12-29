@@ -62,6 +62,45 @@ section {
   height: 100vh;
 }
 
+/** ESTILOS GRID */
+/* Vamos a trabajar con una grid de 12 columnas, cosa que es muy común para poder situar los elementos de una forma cómoda */
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 20px;
+
+  /* Para cada contenedor con esta clase, la altura será el 100% del contenedor */
+  height: 100%;
+}
+
+/* Los elementos dentro del grid (los hijos) van a tener una disposición flex */
+.grid div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Estilos de span. Es muy común, dentro del grid, crear clases para expandir columnas o filas  */
+.span5 {
+  grid-column: span 5;
+}
+
+.span6 {
+  grid-column: span 6;
+}
+
+.span7 {
+  grid-column: span 7;
+}
+
+.span9 {
+  grid-column: span 9;
+}
+
+.span12 {
+  grid-column: span 12;
+}
 /** MENU DE NAVEGACION */
 
 nav {
