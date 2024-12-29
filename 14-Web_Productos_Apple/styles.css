@@ -289,3 +289,52 @@ header .img-container {
      Esto es porque 100vh es demasiado grande, y con auto indicamos que el height del contenedor sea lo que ocupan sus hijos. */
   height: auto;
 }
+
+/** MUSIC / TV */
+
+.musictv {
+  padding: 30px;
+  height: auto;
+}
+
+.musictv .text-container {
+  background: #000;
+}
+
+.musictv .text {
+  height: 50%;
+  width: 50%;
+  padding: 60px 0 30px 0;
+  text-align: center;
+  flex-direction: column;
+}
+
+.musictv .imagen {
+  height: 100%;
+  align-items: flex-end;
+}
+
+.musictv .text-container .icon {
+  width: 100px;
+  height: 40px;
+}
+
+.musictv .text-container h3 {
+  color: #FFF;
+}
+
+.musictv .text-container .enlace-info {
+  margin: 10px 0 30px 0;
+}
+
+.musictv .ct2 {
+  background: #FFF;
+}
+
+.musictv .ct2 .icon {
+  width: 150px;
+}
+
+.musictv .ct2 h3 {
+  color: var(--text-color)
+}
