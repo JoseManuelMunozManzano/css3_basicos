@@ -338,3 +338,29 @@ header .img-container {
 .musictv .ct2 h3 {
   color: var(--text-color)
 }
+
+/** IMAC */
+
+.imac {
+  background: #FFF;
+  padding: 50px 0;
+}
+
+.imac img {
+  width: 50%;
+}
+
+.imac h1 {
+  font-size: 56px;
+}
+
+.imac h2 {
+  font-size: 28px;
+  font-weight: 400;
+}
+
+.imac h3 {
+  color: var(--text-color-claro);
+  letter-spacing: 0.5px;
+  font-size: 18px;
+}
