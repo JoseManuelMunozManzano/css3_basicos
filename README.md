@@ -23,3 +23,9 @@ https://flexboxfroggy.com/#es
 ## Practicar Grid
 
 https://cssgridgarden.com/#es
+
+## Indicar un icono en la pestaña del navegador
+
+Ver proyecto `14-Web_Productos_Apple`, archivo `index.html` donde aparece:
+
+`<link rel="shortcut icon" href="img/icon.png" type="image/x-icon">`
