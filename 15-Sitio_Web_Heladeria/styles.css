@@ -31,3 +31,37 @@ h1, h2 {
 h3 {
   font-family: var(--font-cursiva);
 }
+
+/** GRID */
+/* Estilos generales de grid para todo nuestro proyecto.
+   Vamos a montar una grid de 12 columnas y filas automáticas que abarcan el 100% del contenedor padre */
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: auto;
+  height: 100%;
+}
+
+/* Queremos que el ancho de nuestro contenido ocupe el 85% para que no se pegue mucho a los bordes,
+ y esté centrado a los lados */
+.container-center {
+  width: 85%;
+  margin: 0 auto;
+}
+
+/* Vamos a expandir 6 columnas aquel contenido que nos interese */
+.span6 {
+  grid-column: span 6;
+}
+
+/** CLASES GENERALES PARA SECCIONES */
+/* Esto es porque en nuestra página va a haber muchas etiquetas section */
+
+/* Queremos que cada una de nuestras secciones abarque todo el ancho y todo el alto del navegador */
+/* Indicamos position: relative porque más adelante vamos a trabajar con pseudoelementos */
+section {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+}
