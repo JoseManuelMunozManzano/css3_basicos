@@ -65,3 +65,78 @@ section {
   width: 100%;
   height: 100vh;
 }
+
+/** MENU DE NAVEGACION */
+
+nav {
+  /* El menú siempre va a estar fijo en la parte superior de la pantalla */
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 50px;
+
+  background: rgba(249, 219, 121, 0.745);
+
+  /* Como el menu es fijo, conforme avancemos usando el scroll queremos asegurarnos de que quede por encima
+     de los demás elementos */
+  z-index: 3;
+}
+
+nav .grid {
+  justify-items: start;
+  align-items: center;
+}
+
+/* Los elementos de enlace van a abarcar 10 columnas, y el
+   resto, 2 columnas, lo dejamos para las redes sociales. */
+/* El resto de estilos lo aplicamos usando Flexbox */
+nav .enlaces {
+  grid-column: span 10;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+nav .enlaces a {
+  margin-right: 20px;
+  font-family: var(--font-principal);
+  font-size: 20px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: all .5s;
+}
+
+nav .enlaces a:hover {
+  color: var(--gris200)
+}
+
+/*? Sociales */
+.sociales {
+  grid-column: span 2;
+  display: flex;
+  justify-content: flex-end;
+  /* Si no aplicamos este ancho, indicando que su ancho es
+     del 100% (el de las 2 columnas), no se mueven al final */
+  width: 100%;
+}
+
+/* Estilos a cada elemento de sociales */
+.sociales a {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: #000;
+  color: #FFF;
+
+  /* Como tenemos tamaño, podemos centrar cada icono usando FlexBox */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  /* Otra forma de centrar usando grid */
+  /* display: grid;
+  place-items: center; */
+}
