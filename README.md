@@ -29,3 +29,18 @@ https://cssgridgarden.com/#es
 Ver proyecto `14-Web_Productos_Apple`, archivo `index.html` donde aparece:
 
 `<link rel="shortcut icon" href="img/icon.png" type="image/x-icon">`
+
+## Cambiar el estilo del scroll
+
+Ver proyecto `15-Sitio_Web_Corporativo`, archivo `styles.css` donde aparece:
+
+```
+body::-webkit-scrollbar {
+  width: 8px;
+}
+
+body::-webkit-scrollbar-thumb {
+  background: #F7CA37;
+  border-radius: 50px;
+}
+```

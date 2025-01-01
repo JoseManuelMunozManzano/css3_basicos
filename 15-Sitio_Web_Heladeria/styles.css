@@ -10,6 +10,17 @@
   --gris200: #706D6D;
 }
 
+/** SCROLL BAR */
+
+body::-webkit-scrollbar {
+  width: 8px;
+}
+
+body::-webkit-scrollbar-thumb {
+  background: #F7CA37;
+  border-radius: 50px;
+}
+
 /** GENERALES */
 
 * {
@@ -384,6 +395,83 @@ header .text-content h3 {
 }
 
 .helado img {
+  height: 109vh;
   width: 100%;
   object-fit: cover;
+}
+
+/** FOOTER */
+
+/* Damos un tamaño al footer */
+footer {
+  width: 100%;
+  height: 400px;
+}
+
+/* Para el footer no tenemos 12 columnas, sino 5 columnas */
+footer .grid {
+  grid-template-columns: repeat(5, 1fr);
+  gap: 20px;
+  justify-items: center;
+  align-content: center;
+}
+
+footer h2 {
+  font-size: 28px;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+
+footer p,
+footer ul,
+footer input {
+  margin: 10px 0;
+}
+
+footer ul {
+  list-style: none;
+}
+
+footer ul li a:hover {
+  text-decoration: underline;
+}
+
+footer input {
+  width: 100%;
+  height: 40px;
+  padding: 0 20px;
+}
+
+footer input::placeholder {
+  letter-spacing: 1px;
+  color: var(--gris600)
+}
+
+footer .btn {
+  width: 100%;
+}
+
+footer .sociales {
+  justify-content: flex-start;
+}
+
+/** FOOTER COPY */
+
+div.copy {
+  width: 100%;
+  height: 35px;
+  background: #000;
+
+  /* Vamos a tener una sola columna que va a abarcar el 100%.
+     También podríamos haber indicado span 12 */
+  display: grid;
+  grid-template-columns: 100%;
+  justify-items: center;
+  align-items: center;
+}
+
+div.copy p {
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 14px;
+  font-weight: 600;
 }
