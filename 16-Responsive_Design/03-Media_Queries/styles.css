@@ -1,0 +1,37 @@
+div {
+  width: 500px;
+  height: 500px;
+  margin: 50px auto;
+  background: crimson;
+}
+
+/* ESTILOS MEDIA QUERY */
+/* Son una regla o un condicional que creamos en CSS3 para indicar
+   que para un cierto tamaño de pantalla o cuando se cumpla una
+   condición, va a aplicar un estilo a ciertos elementos. */
+
+/* Desde el tamaño mínimo de 1000px hacia arriba */
+@media screen and (min-width: 1000px) {
+  div {
+    background: #000;
+  }
+}
+
+/* Rango entre 1000px hasta 700px */
+@media screen and (max-width: 1000px) and (min-width: 700px) {
+  div {
+    background: orange;
+    width: 100%;
+  }
+}
+
+/* Desde 0 hasta un tamaño máximo de 700px */
+/* Es el media query que más se va a utilizar, porque generalmente
+   el responsive se hace pensando en dispositivos más pequeños. */
+@media screen and (max-width: 700px) {
+  div {
+    width: 100%;
+    height: 100vh;
+    background: lightseagreen;
+  }
+}

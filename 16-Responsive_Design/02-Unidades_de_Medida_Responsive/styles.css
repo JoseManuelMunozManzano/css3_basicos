@@ -1,0 +1,160 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans',
+    'Helvetica Neue', sans-serif;
+}
+
+/*   Estos son los tres pasos para aplicar unidades y que nuestra web sea responsive.
+     Solo el primero es obligatorio, los otros dos son recomendados:
+
+     Aplicar unidades en porcentaje a los contenedores (1)
+          Evitamos que se desborde el contenido y genere un scroll horizontal.
+          Un scroll horizontal no está bien visto en una web.
+          Lo correcto es un scroll vertical.
+     Aplicar un max width (2)
+          Limita que tanto va a crecer un contenedor.
+          Se hace cuando la pantalla es muy grande.
+     Aplicar vmax, vmin, o vw a los elementos de texto (3)
+          Es una propiedad relativamente nueva para solucionar un problema web de mucho tiempo.
+          Conseguimos que nuestros textos también sean responsive.
+          Muy útil para pantallas muy pequeñas o muy grandes.
+          Valores posibles:
+            vw: viewport width
+              Se hace más grande o más pequeño dependiendo del tamaño de la pantalla.
+            vmin: viewport min
+              Tamaño mínimo a partir del cual no se hace más grande.
+              En dispositivos grandes el siempre va a tener el mismo tamaño.
+              Se puede hacer más pequeño, pero no más grande.
+              Es el más utilizado porque solemos querer acoplarnos a pantallas pequeñas.
+            vmax: viewport max
+              Tamaño máximo a partir del cual no se hace más pequeño.
+              En dispositivos pequeños siempre va a tener el mismo tamaño.
+              Se puede hacer más grande, pero no más pequeño.
+*/
+
+.contenedor {
+  width: 100%;
+
+  /* (2) */
+  max-width: 1200px;
+
+  margin: auto;
+  background: #ccc;
+  padding: 10px;
+  height: 100vh;
+}
+
+header,
+footer {
+  /* Codigo antiguo no responsive.
+     El pixel es una unidad fija.
+     Indicar que el height algunas veces se puede dejar en px, el problema suele ser el ancho. */
+  /* width: 1180px;
+  height: 100px; */
+
+  /* Código responsive en el que aplicamos unidades de porcentaje (1)
+     El porcentaje es una unidad relativa, porque el contenedor se va
+     a acoplar dependiendo del tamaño de la pantalla. */
+  width: 100%;
+  height: 20%;
+
+  background: #222;
+  color: #fff;
+
+  /* Código antiguo no responsive.
+     Al hacer la pantalla cada vez más pequeña el tamaño del texto se mantiene y no queda bien. */
+  /* font-size: 22px; */
+
+  /* Código responsive (3) */
+  font-size: 3vmin;
+
+  text-transform: uppercase;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+section {
+  /* Codigo antiguo no responsive.
+     Indicar que el height se puede dejar, el problema suele ser el ancho. */
+  /* height: 420px; */
+
+  /* Código responsive en el que aplicamos unidades de porcentaje (1) */
+  width: 100%;
+  height: 60%;
+
+  padding: 10px 0;
+
+  /* Si descomentamos este flex, ya no hace falta el float de .contenido */
+  display: flex;
+  justify-content: space-between;
+}
+
+.contenido {
+  /* Si descomentamos este float, ya no hace falta el flex de section */
+  /* float: left; */
+
+  padding: 20px;
+
+  /* Codigo antiguo no responsive. */
+  /* width: 800px;
+     height: 400px; */
+
+  /* Código responsive en el que aplicamos unidades de porcentaje (1) */
+  width: 70%;
+  /* Aquí el height si que tiene que ir en porcentaje, sino se ve mal */
+  height: 100%;
+
+  background: lightseagreen;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.contenido h1 {
+  /* Código antiguo no responsive. */
+  /* font-size: 40px; */
+
+  /* Código responsive (3) */
+  font-size: 9vmin;
+
+  text-transform: uppercase;
+}
+
+.contenido p {
+  /* Código antiguo no responsive. */
+  /* font-size: 20px; */
+
+  /* Código responsive (3) */
+  font-size: 2.5vmin;
+
+  text-align: center;
+}
+
+aside {
+  /* Codigo antiguo no responsive. */
+  /* width: 300px;
+     height: 400px; */
+
+  /* Código responsive en el que aplicamos unidades de porcentaje (1)
+     Es 30% porque .contenido ocupa el otro 70%. */
+  width: 30%;
+  /* Aquí el height si que tiene que ir en porcentaje, sino se ve mal */
+  height: 100%;
+
+  background: crimson;
+
+  /* Código antiguo no responsive */
+  /* font-size: 30px; */
+
+  /* Código responsive (3) */
+  font-size: 5vmin;
+
+  text-transform: uppercase;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

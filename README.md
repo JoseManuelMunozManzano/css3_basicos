@@ -44,3 +44,17 @@ body::-webkit-scrollbar-thumb {
   border-radius: 50px;
 }
 ```
+
+## ¿Qué se necesita para aplicar Responsive Design?
+
+Ver directorio `16-Responsive_Design`.
+
+Las tres reglas esenciales son:
+
+- Aplicar viewport
+- Utilizar porcentajes en contenedores (cajas, header, section...)
+- Aplicar Media Query
+
+## Modo oscuro
+
+Ver directorio `16-Responsive_Design/04-Media_Query_Scheme_Para_Aplicar_Modo_Oscuro` para ver como trabajar con el tema del dispositivo.

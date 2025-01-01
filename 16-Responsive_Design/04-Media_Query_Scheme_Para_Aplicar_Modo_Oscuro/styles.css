@@ -1,0 +1,58 @@
+:root {
+  --dark: #222;
+  --ligth: #dedede;
+
+  --background: var(--dark);
+  --font-text: var(--ligth);
+}
+
+body {
+  background-color: var(--background);
+  color: var(--font-text);
+  font-size: 40px;
+}
+
+.container {
+  padding: 20px;
+}
+
+div.img {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  background: url(../img/sun.jpg);
+  background-size: cover !important;
+  background-position: center !important;
+}
+
+/* MEDIA QUERY SCHEME */
+
+/* Esta característica de CSS3, junto con los media queries,
+   permite aplicar modo oscuro a nuestras páginas web.
+
+   En concreto, permite dar diferentes estilos a nuestros elementos,
+   según la configuración que tenga nuestro dispositivo (S.O. de PC o móvil).
+   Si nuestro dispositivo tiene aplicado el modo oscuro, se va a
+   activar en nuestra web. */
+
+/* Este media query ya no observa el tamaño de la pantalla, sino que verifica
+  el tema que tengo en el dispositivo.
+  Si tengo el tema oscuro, se aplicarán todos estos estilos. */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: var(--dark);
+    --font-text: var(--ligth);
+  }
+
+  div.img {
+    background: url(../img/moon.jpg);
+  }
+}
+
+/* Si en mi dispositivo tengo activo el tema claro, se aplicarán estos estilos. */
+@media (prefers-color-scheme: light) {
+  :root {
+    --background: var(--light);
+    --font-text: var(--dark);
+  }
+}
