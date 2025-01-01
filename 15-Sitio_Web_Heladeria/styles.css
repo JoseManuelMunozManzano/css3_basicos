@@ -96,6 +96,21 @@ section {
   height: 100vh;
 }
 
+section.full::before {
+  content: '';
+
+  /* Recordar que section tiene position: relative, así que aquí puedo indicar position:absolute */
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+
+  background-attachment: fixed !important;
+  background-position: center !important;
+  background-size: cover !important;
+}
+
 /** CONTENEDOR BACKGROUND */
 /* En vez de colocar estas dos propiedades en cada elemento,
    la hago general y, para que se aplique, la hago !important. */
@@ -313,4 +328,46 @@ header .text-content h3 {
 
 .sabores div.background {
   background: url(img/image2.webp);
+}
+
+/** ESPECIAL */
+
+.especial {
+  background: #B5E8D5;
+}
+
+/* Aprovecho un pseudoelemento para colocar otro background, esta vez una imagen de fondo */
+/* La propiedad obligatoria content y demás propiedades lo tiene su estilo general section.full::before */
+.especial::before {
+  background: url(img/image3.webp);
+}
+
+/** LUGAR */
+
+.lugar .background {
+  background: url(img/image4.webp);
+}
+
+
+/** EVENTOS */
+
+.eventos {
+  background: #FFBFB3;
+}
+
+/* Aprovecho un pseudoelemento para colocar otro background, esta vez una imagen de fondo */
+/* La propiedad obligatoria content y demás propiedades lo tiene su estilo general section.full::before */
+.eventos::before {
+  background: url(img/image5.webp);
+}
+
+/* Arreglo concreto de un botón sobre los estilos generales */
+.eventos .btn {
+  width: 200px;
+}
+
+/** POSTRES */
+
+.postres .background {
+  background: url(img/image6.webp);
 }
