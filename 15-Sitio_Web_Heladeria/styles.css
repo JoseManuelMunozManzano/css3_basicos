@@ -32,6 +32,33 @@ h3 {
   font-family: var(--font-cursiva);
 }
 
+/** BOTONES */
+.btn {
+  background: transparent;
+  width: 130px;
+  height: 42px;
+  font-size: 20px;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all .5s;
+}
+
+.btn.light {
+  color: #FFF;
+  border: 2px solid #FFF;
+}
+
+.btn.dark {
+  color: var(--gris600);
+  border: 2px solid var(--gris600);
+}
+
+.btn:hover {
+  background: var(--gris600);
+  border: 2px solid var(--gris600);
+  color: #FFF;
+}
+
 /** GRID */
 /* Estilos generales de grid para todo nuestro proyecto.
    Vamos a montar una grid de 12 columnas y filas automáticas que abarcan el 100% del contenedor padre */
@@ -64,6 +91,53 @@ section {
   position: relative;
   width: 100%;
   height: 100vh;
+}
+
+/** TEXT CONTENT */
+
+.text-content {
+  position: relative;
+  width: 100%;
+  height: 100%;
+
+  /* Para centrar horizontalmente usamos flexbox */
+  /* Aquí centramos dentro de su columna, la 1 */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  /* Para que se posione por encimma del background */
+  z-index: 1;
+}
+
+/*? Full */
+
+/* Con esto conseguimos que el elemento, que ocupaba una columna, se expanda hasta las 12, y
+   como estaba centrado en su columna, ahora esta completamente centrado en todo el ancho. */
+.text-content.full {
+  grid-column: span 12;
+}
+
+.text-content.full h1,
+.text-content.full h2 {
+  color: #FFF;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.text-content.full h1 {
+  font-size: 115px;
+  letter-spacing: 20px;
+  line-height: 1.5;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.text-content.full h2 {
+  font-size: 50px;
+  letter-spacing: 2px;
+  font-weight: 100;
+  line-height: 0.1;
 }
 
 /** MENU DE NAVEGACION */
@@ -139,4 +213,58 @@ nav .enlaces a:hover {
   /* Otra forma de centrar usando grid */
   /* display: grid;
   place-items: center; */
+}
+
+/** HEADER */
+
+header {
+  /* Indicamos position relative porque vamos a tener pseudoelementos que trabajen con el
+     y voy a necesitar poder ubicar donde quiera.
+  */
+  position: relative;
+  width: 100%;
+  /* Sumo 50px que es lo que ocupa mi nav. Esto provoca que aparezca el scroll,
+     que no me importa porque va a haber más páginas hacia abajo.
+     Pero si no lo hago, en algunas pantallas más pequeñas la imagen del
+     background se va a ver sobrepuesta con el nav. */
+  height: calc(100vh + 50px);
+  background: #F9DB79;
+}
+
+header::before {
+  content: '';
+
+  /* Aquí indicamos position absolute para poder trabajar junto al position relative de arriba.
+     Coloco el elemento donde quiera. */
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+
+  background: url(img/image1.webp);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+header .grid {
+  /* Centramos en su alto de columna (la 1) usando grid */
+  justify-items: center;
+  align-items: center;
+}
+
+header .text-content {
+  /* Con esto se ubica un poco más abajo del centro */
+  padding: 200px 0 0 0;
+}
+
+header .text-content h3 {
+  /* De nuevo, el contenedor header tenía un position: relative, y ahora,
+  indicando aquí position: absolute, lo puedo ubicar donde quiera con respecto a ese contenedor. */
+  position: absolute;
+  bottom: 50px;
+  right: 0;
+  font-size: 50px;
+  font-weight: 700;
+  color: #000;
 }
