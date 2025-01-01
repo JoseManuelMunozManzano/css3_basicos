@@ -371,3 +371,19 @@ header .text-content h3 {
 .postres .background {
   background: url(img/image6.webp);
 }
+
+/** HELADOS */
+
+.helado {
+  background: url(img/image7.webp), #B5E8D5;
+  background-attachment: fixed;
+  background-size: cover;
+
+  /* Acoplando la imagen para que se vea correcta usando flex */
+  display: flex;
+}
+
+.helado img {
+  width: 100%;
+  object-fit: cover;
+}
