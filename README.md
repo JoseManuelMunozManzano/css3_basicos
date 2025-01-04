@@ -87,3 +87,7 @@ Para crear un entorno de desarrollo con SASS, necesitamos tener instalado `Node.
   - Se indica la carpeta origen, seguido de dos puntos y la carpeta destino
   - Se crea un archivo `css/styles.css.map` que es un mapa de nuestro archivo SASS. No hay que hacerle caso
   - Se genera la hoja de estilos en nuestro archivo `css/styles.css` que estaba vacío
+
+También existe una extensión para VSCode que se llama `Live Sass Compiler` y compila automáticamente el archivo SASS a CSS sin necesidad de instalar `NodeJs` ni `npm` ni `Sass`. La instalo y aparece en la parte inferior derecha de VSCode el texto `Watch Sass`. Pulsando en el, va vigilando los cambios. Se suele usar esta opción para proyectos personales, más pequeños.
+
+Prefiero usar los comandos.
