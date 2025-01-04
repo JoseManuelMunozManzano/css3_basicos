@@ -65,3 +65,25 @@ Para aplicar media query cuando trabajamos con `grid-areas` ver directorio `17-P
 ## Modo oscuro
 
 Ver directorio `16-Responsive_Design/04-Media_Query_Scheme_Para_Aplicar_Modo_Oscuro` para ver como trabajar con el tema del dispositivo.
+
+## SASS - Creación de Entorno
+
+Para crear un entorno de desarrollo con SASS, necesitamos tener instalado `Node.js` y `npm`.
+
+- Creamos un proyecto, por ejemplo `18-SASS-CSS_con_Superpoderes`
+- Creamos los siguientes directorios:
+  - css
+    - Creamos el archivo `styles.css`
+  - scss
+    - Creamos el archivo `styles.scss`
+- Inicializamos el proyecto con `npm init -y`
+  - Con esto se crea el archivo `package.json`
+- Instalamos SASS usando el mandato `npm i sass`
+  - Se crea el directorio `node_modules` con las dependencias de SASS
+- Creamos el archivo html `index.html` y le vinculamos el archivo `styles.css` (el de la carpeta css)
+- Empezamos a trabajar con nuestro archivo SASS `styles.scss` (el de la carpeta scss)
+- Para compilar el archivo SASS a CSS, usamos el mandato `npx sass --watch scss:css`
+  - Usando `--watch` se compila automáticamente cada vez que guardamos el archivo SASS
+  - Se indica la carpeta origen, seguido de dos puntos y la carpeta destino
+  - Se crea un archivo `css/styles.css.map` que es un mapa de nuestro archivo SASS. No hay que hacerle caso
+  - Se genera la hoja de estilos en nuestro archivo `css/styles.css` que estaba vacío
