@@ -1,0 +1,32 @@
+// LISTAS
+// Son arreglos, es decir, variables que contienen múltiples valores.
+@use "sass:list";
+
+$colores: blue, red, green, yellow, orange, pink;
+$colores2: indigo, black, white;
+
+//* Acceder a un elemento de una lista.
+// Se usa la función nth(), indicando primero el nombre de la lista y luego la posición del elemento,
+// empezando desde 1.
+h1 {
+  color: list.nth($colores, 3);
+}
+
+//* Combinando listas
+// Se indican las listas a combinar y el separador que se usará para unirlas.
+// blue, red, green, yellow, orange, pink, indigo, black, white
+$coloresTotales: list.join($colores, $colores2, $separator: comma);
+
+h1 {
+  color: list.nth($coloresTotales, 7)
+}
+
+//* Agregar elementos a una lista
+// Indicamos la lista a la que queremos agregar un elemento, el elemento a agregar y el separador.
+// En este caso, $agregarElemento es una nueva lista con todos los valores de $colores, una coma y el nuevo valor black.
+// blue, red, green, yellow, orange, pink, black
+$agregarElemento: list.append($colores, black, $separator: comma);
+
+h1 {
+  color: list.nth($agregarElemento, 7)
+}
