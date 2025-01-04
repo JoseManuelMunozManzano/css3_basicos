@@ -1,0 +1,46 @@
+// OPERACIONES
+/* Como SASS es un lenguaje de programación, podemos realizar operaciones matemáticas en nuestros
+ estilos. En CSS teníamos que utilizar la función calc(), pero en SASS no es necesario.
+
+ Las unidades que se sumen o resten deben ser del mismo tipo, por ejemplo, px con px, em con em, etc.
+
+ Para operar con unidades distintas, se puede seguir usando la función calc(). Por ejemplo:
+ height: calc(100vh - 50px);
+
+ En SASS, se usa la multiplicación y la división para calcular de forma dinámica el valor de una propiedad, generalmente un porcentaje para un tamaño. Para usar la división hay que usar la función
+ math.div(), exportando primero sass:math, por ejemplo:
+ @use "sass:math";
+ width: math.div(400px, 600px) * 100%;
+
+*/
+
+@use "sass:math";
+
+.container {
+  width: 600px;
+  margin: 0 auto; // centramos
+
+  section {
+    float: left;
+    // Uso de suma y resta
+    // width: 200px - 50px;
+
+    // Uso de multiplicación y división.
+    // Indicamos el tamaño que quiero que tenga, lo divido entre el tamaño del contenedor y lo
+    // multiplico por 100 para obtener el porcentaje.
+    // En este ejemplo estamos aplicando un 33.33333%
+    width: math.div(200px, 600px) * 100%;
+    
+    height: 400px;
+    background: #222;
+  }
+  
+  aside {
+    float: left;
+    // Uso de multiplicación y división.
+    // En este ejemplo estamos aplicando un 66.66667%
+    width: math.div(400px, 600px) * 100%;
+    height: 400px;
+    background: orangered;
+  }
+}
