@@ -55,6 +55,13 @@ Las tres reglas esenciales son:
 - Utilizar porcentajes en contenedores (cajas, header, section...)
 - Aplicar Media Query
 
+En Flexbox, hay que usar la propiedad `flex-wrap: wrap;` para que los elementos se ajusten al tamaño de la pantalla. Ver directorio `17-Practicas_Responsive_Design/01-Galeria_de_Imagenes_Responsive`.
+
+En Grid Layout, para que los elementos sean responsive, no hay que usar nada especial, ya que es responsive por defecto. Es decir, usar `grid-template-columns` y `grid-template-rows`, pero, eso si, en los valores hay que usar `auto-fill` para poder acoplar los elementos al contenedor y `minmax` para indicar el tamaño mínimo y máximo.
+Ver directorio `17-Practicas_Responsive_Design/03-Aplicando_Responsive_a_Nuestra_Galeria_Grid`.
+
+Para aplicar media query cuando trabajamos con `grid-areas` ver directorio `17-Practicas_Responsive_Design/04-Aplicando_Responsive_a_Nuestras_App_Google_con_Masonry_Layout`.
+
 ## Modo oscuro
 
 Ver directorio `16-Responsive_Design/04-Media_Query_Scheme_Para_Aplicar_Modo_Oscuro` para ver como trabajar con el tema del dispositivo.

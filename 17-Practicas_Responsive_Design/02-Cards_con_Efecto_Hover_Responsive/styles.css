@@ -1,0 +1,111 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: #010615;
+}
+
+.container {
+  width: 1200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.item {
+  position: relative;
+  width: 300px;
+  height: 300px;
+  display: flex;
+  margin: 40px
+}
+
+.img {
+  /* Con el position: absolute y ocupando el 100% del contenedor,
+     la imagen se situa por encima del texto, ocultándolo. */
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  /* Esto también influye en que la imagen aparezca por encima. */
+  z-index: 1;
+  transition: all .5s;
+}
+
+.img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Para poder escribir estos estilos del contenido, en el
+   html se ha comentado una de las imágenes. */
+.content {
+  /* Hacemos que el contenido ocupe el mismo tamaño del contenedor
+     que la imagen, pero esta oculta por debajo. */
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #FFF;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  flex-direction: column;
+  padding: 15px;
+  transition: all .5s;
+}
+
+.content h2,
+.content p {
+  font-weight: 500;
+  line-height: 20px;
+  letter-spacing: 1px;
+}
+
+.content h2 {
+  font-size: 20px;
+  color: #111;  
+}
+
+.content p {
+  font-size: 14px;
+  color: #555;  
+}
+
+/* Aquí volvimos a descomentar la imagen. */
+
+/* Aquí decimos: cuando a mi item le haga hover, que pasa con mi imagen */
+.item:hover .img {
+  transform: translate(-35px, -35px);
+}
+
+.item:hover .content {
+  transform: translate(35px, 35px);
+}
+
+/** MEDIA QUERY */
+/* Cuando el tamaño de pantalla sea muy pequeño, la imagen se 
+   mueve hacia arriba y el texto se mueve hacia abajo, en vez
+   de moverse imagen y texto a los lados. */
+
+@media screen and (max-width: 700px) {
+  .item:hover .img {
+    transform: translate(0, -35px);
+  }
+
+  .item:hover .content {
+    transform: translate(0, 35px);
+  }
+}
