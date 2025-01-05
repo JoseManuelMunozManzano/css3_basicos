@@ -1,0 +1,65 @@
+// BUCLES
+// Podemos usar los bucles @for, @while y @each para crear código de forma dinámica.
+
+//* TEORIA 
+
+//? For
+@for $i from 1 through 6 {
+  // Interpolación #{$i}
+  // En vez de indicar h1, h2,... el número me lo da mi variable $i de esta manera:
+  h#{$i} {
+    font-size: $i * 2em;
+  }
+}
+
+//? While
+$i: 6;
+
+@while $i > 0 {
+  h#{$i} {
+    font-size: $i * 2em;
+  }
+
+  $i: $i - 1;
+}
+
+//? Each
+// Accede a los diferentes valores dentro de un arreglo y hacemos cosas.
+
+$colores: (#0000ff, azul), (#ff1100, rojo), (#09ff00, verde), (#000, negro), (#ea00ff, rosa);
+
+@each $color, $nombre in $colores {
+  // Estamos creando muchas clases de forma dinámica
+  // .text-azul, .text-rojo...
+  // Y le asignamos color.
+  .text-#{$nombre} {
+    color: $color;
+  }
+}
+
+
+//* EJEMPLO DE BUCLES
+
+@function colorArithmetic($color, $scale: 1, $offset: 0) {
+  $red: (
+    red($color) * $scale) + $offset;
+  $green: (
+    green($color) * $scale) + $offset;
+  $blue: (
+    blue($color) * $scale) + $offset;
+  @return rgb($red, $green, $blue)
+}
+
+.box {
+  display: inline-block;
+  width: 200px;
+  height: 200px;
+  border: 1px solid #ccc;
+}
+
+@for $i from 1 through 20 {
+  // Accedemos a cada uno de los .box
+  .box:nth-child(#{$i}) {
+    background: colorArithmetic(#00061A, $i);
+  }
+}
