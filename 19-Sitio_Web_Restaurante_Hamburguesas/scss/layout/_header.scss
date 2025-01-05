@@ -1,0 +1,29 @@
+@use "../general/mixin" as m;
+
+.header {
+  position: relative;
+  @include m.dflex(center, center, column nowrap);
+  width: 100%;
+  height: 600px;
+  background: url(../../img/image1.jpg);
+  background-size: cover;
+  background-position: bottom;
+  clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%);
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba($color: #000000, $alpha: 0.5);
+  }
+
+  // A todos los elementos que están en el header
+  * {
+    // Al indicar position: relative, el h1 y el h2 que contiene el header pasan a estar
+    // adelante.
+    position: relative;
+  }
+}
