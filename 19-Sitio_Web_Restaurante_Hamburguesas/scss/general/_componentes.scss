@@ -1,0 +1,20 @@
+@use "mixin" as m;
+@use "variables" as v;
+
+//* ICONOS
+// Aquí aplicamos estilos, pero no tamaños (ver _about.scss)
+.icons {
+  @include m.dflex(space-between, center, row nowrap);
+  
+  a {
+    @include m.dflex(center, center, row nowrap);
+    background: v.$color-primario;
+    border-radius: 50%;
+    color: v.$white;
+    transition: all .5s;
+
+    &:hover {
+      background: v.$color-primario-dark;
+    }
+  }
+} 
