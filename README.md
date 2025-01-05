@@ -91,3 +91,17 @@ Para crear un entorno de desarrollo con SASS, necesitamos tener instalado `Node.
 También existe una extensión para VSCode que se llama `Live Sass Compiler` y compila automáticamente el archivo SASS a CSS sin necesidad de instalar `NodeJs` ni `npm` ni `Sass`. La instalo y aparece en la parte inferior derecha de VSCode el texto `Watch Sass`. Pulsando en el, va vigilando los cambios. Se suele usar esta opción para proyectos personales, más pequeños.
 
 Prefiero usar los comandos.
+
+## SASS - Uso de módulos
+
+Ver proyecto `18-SASS-CSS_con_Superpoderes/07-modulos.html` y sus archivos SASS `18-SASS-CSS_con_Superpoderes/scss/07-modulos`.
+
+Trabajar con módulos supone separar nuestros estilos en diferentes archivos y unirlos todos en una única hoja de estilos.
+
+Si hasta ahora hemos separado fragmentos de código CSS usando comentarios, ahora esos fragmentos, por funcionalidad, irán a un archivo distinto.
+
+El nombre de los archivos que contienen módulos tiene que comenzar con `_`, por ejemplo `_header.scss`. Esto es así porque no queremos que ese archivo se transforme en CSS.
+
+Luego, al importar (usando `@use`) todos esos archivos a un único archivo, cuyo nombre no comienza por `_`, se creará el archivo CSS como si todo estuviera en una única hoja de estilos.
+
+De esta manera, nos podemos organizar mejor.
