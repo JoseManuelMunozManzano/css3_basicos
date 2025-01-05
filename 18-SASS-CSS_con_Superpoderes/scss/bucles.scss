@@ -1,6 +1,8 @@
 // BUCLES
 // Podemos usar los bucles @for, @while y @each para crear código de forma dinámica.
 
+@use "sass:color";
+
 //* TEORIA 
 
 //? For
@@ -42,11 +44,11 @@ $colores: (#0000ff, azul), (#ff1100, rojo), (#09ff00, verde), (#000, negro), (#e
 
 @function colorArithmetic($color, $scale: 1, $offset: 0) {
   $red: (
-    red($color) * $scale) + $offset;
+    color.channel($color, "red", $space: rgb) * $scale) + $offset;
   $green: (
-    green($color) * $scale) + $offset;
+    color.channel($color, "green", $space: rgb) * $scale) + $offset;
   $blue: (
-    blue($color) * $scale) + $offset;
+    color.channel($color, "blue", $space: rgb) * $scale) + $offset;
   @return rgb($red, $green, $blue)
 }
 

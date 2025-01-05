@@ -6,6 +6,16 @@ El orden del curso se puede ver en el nombre de las distintas carpetas.
 
 En este README voy a dejar solo lo que vea más importante de entre todo el contenido del curso.
 
+## Instalación de fuentes Google Fonts en VSCode
+
+Para instalar y usar fuentes de Google Fonts en VSCode hay que realizar los siguientes pasos:
+
+- Seleccionar un fuente `.css` o `.scss`
+- Pulsar Cmd+Shift+P
+- Escribir y seleccionar `Google Fonts: Insert CSS @import`
+- Escribir y seleccionar la fuente deseada
+  - En nuestro código veremos una línea `@import` con la fuente seleccionada
+
 ## Como centrar contenido
 
 Ver los archivos:
@@ -121,11 +131,11 @@ Aunque SASS ya no permite multiplicar colores, si que se puede hacer este truco 
 ```
 @function colorArithmetic($color, $scale: 1, $offset: 0) {
   $red: (
-    red($color) * $scale) + $offset;
+    color.channel($color, "red", $space: rgb) * $scale) + $offset;
   $green: (
-    green($color) * $scale) + $offset;
+    color.channel($color, "green", $space: rgb) * $scale) + $offset;
   $blue: (
-    blue($color) * $scale) + $offset;
+    color.channel($color, "blue", $space: rgb) * $scale) + $offset;
   @return rgb($red, $green, $blue)
 }
 
@@ -140,6 +150,19 @@ Aunque SASS ya no permite multiplicar colores, si que se puede hacer este truco 
   // Accedemos a cada uno de los .box
   .box:nth-child(#{$i}) {
     background: colorArithmetic(#00061A, $i);
+  }
+}
+```
+
+Otra forma de hacer esto, aunque no es exactamente igual, es:
+
+```
+@use 'sass:color';
+
+@for $i from 1 through 20 {
+  // Accedemos a cada uno de los .box
+  .box:nth-child(#{$i}) {
+    background: color.scale(#00061A, $lightness: $i * 10%);
   }
 }
 ```
