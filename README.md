@@ -105,3 +105,33 @@ El nombre de los archivos que contienen módulos tiene que comenzar con `_`, por
 Luego, al importar (usando `@use`) todos esos archivos a un único archivo, cuyo nombre no comienza por `_`, se creará el archivo CSS como si todo estuviera en una única hoja de estilos.
 
 De esta manera, nos podemos organizar mejor.
+
+## SASS - Cambio de colores de forma dinámica
+
+Aunque SASS ya no permite multiplicar colores, si que se puede hacer este truco para ello. Ver proyecto `18-SASS-CSS_con_Superpoderes/scss/bucles.scss`, donde se utiliza una función que cambia el valor del rojo, verde y azul:
+
+```
+@function colorArithmetic($color, $scale: 1, $offset: 0) {
+  $red: (
+    red($color) * $scale) + $offset;
+  $green: (
+    green($color) * $scale) + $offset;
+  $blue: (
+    blue($color) * $scale) + $offset;
+  @return rgb($red, $green, $blue)
+}
+
+.box {
+  display: inline-block;
+  width: 200px;
+  height: 200px;
+  border: 1px solid #ccc;
+}
+
+@for $i from 1 through 20 {
+  // Accedemos a cada uno de los .box
+  .box:nth-child(#{$i}) {
+    background: colorArithmetic(#00061A, $i);
+  }
+}
+```
