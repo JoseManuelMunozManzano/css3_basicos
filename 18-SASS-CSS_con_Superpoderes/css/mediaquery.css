@@ -1,0 +1,24 @@
+p {
+  font-size: 80px;
+  color: lightseagreen;
+}
+@media (max-width: 1024px) {
+  p {
+    font-size: 60px;
+    color: crimson;
+  }
+}
+@media (max-width: 800px) {
+  p {
+    font-size: 40px;
+    color: greenyellow;
+  }
+}
+@media (max-width: 480px) {
+  p {
+    font-size: 20px;
+    color: #000;
+  }
+}
+
+/*# sourceMappingURL=mediaquery.css.map */

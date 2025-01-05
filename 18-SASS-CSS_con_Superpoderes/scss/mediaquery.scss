@@ -1,0 +1,109 @@
+// MEDIA QUERY
+
+//* USANDO CSS
+
+// p {
+//   font-size: 80px;
+//   color: lightseagreen;
+// }
+
+// @media screen and (max-width: 900px) {
+//   p {
+//     font-size: 60px;
+//     color: crimson;
+//   }
+// }
+
+// @media screen and (max-width: 700px) {
+//   p {
+//     font-size: 40px;
+//     color: greenyellow;
+//   }
+// }
+
+// @media screen and (max-width: 400px) {
+//   p {
+//     font-size: 20px;
+//     color: #000;
+//   }
+// }
+
+//* USANDO SASS
+
+// $desktop: "(max-width: 1024px)";
+// $tablets: "(max-width: 720px)";
+// $phones: "(max-width: 480px)";
+
+// @mixin desktop {
+//   @media screen and #{$desktop} {
+//     // Hace referencia (importa) los estilos especificados.
+//     @content;
+//   }
+// }
+
+// @mixin tablets {
+//   @media screen and #{$tablets} {
+//     @content;
+//   }
+// }
+
+// @mixin phones {
+//   @media screen and #{$phones} {
+//     @content;
+//   }
+// }
+
+// p {
+//   font-size: 80px;
+//   color: lightseagreen;
+
+//   // Aplicamos los media query.
+//   @include desktop() {
+//     font-size: 60px;
+//     color: crimson;
+//   }
+
+//   @include tablets() {
+//     font-size: 40px;
+//     color: greenyellow;
+//   }
+
+//   @include phones() {
+//     font-size: 20px;
+//     color: #000;
+//   }
+// }
+
+
+//* USANDO SASS VERSION 2
+
+$desktop: 1024px;
+$tablet: 800px;
+$phone: 480px;
+
+@mixin mq($width) {
+  @media (max-width: $width) {
+    // Hace referencia (importa) los estilos especificados.
+    @content;
+  }
+}
+
+p {
+  font-size: 80px;
+  color: lightseagreen;
+
+  @include mq($desktop) {
+    font-size: 60px;
+    color: crimson;
+  }
+
+  @include mq($tablet) {
+    font-size: 40px;
+    color: greenyellow;
+  }
+
+  @include mq($phone) {
+    font-size: 20px;
+    color: #000;
+  }
+}
