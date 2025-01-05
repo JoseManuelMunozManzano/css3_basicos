@@ -1,0 +1,30 @@
+// EXTEND
+// Se aplica a contenedores que comparten el mismo estilo y donde solo cambian ciertas propiedades.
+// Sirve para reutilizar código.
+// Esto también se puede solucionar usando mixin.
+
+// Esta clase no existe en el html.
+// Mis clases existentes en el html van a extender de esta clase, reutilizando su código.
+.contenedor {
+  display: inline-block;
+  width: 300px;
+  border: 1px solid #000;
+  padding: 40px;
+  margin: 10px;
+}
+
+//* Usando extend 
+.contenedor-red {
+  @extend .contenedor;
+  background: crimson;
+}
+
+.contenedor-blue {
+  @extend .contenedor;
+  background: lightblue;
+}
+
+.contenedor-green {
+  @extend .contenedor;
+  background: lightgreen;
+}
