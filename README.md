@@ -62,6 +62,8 @@ Ver directorio `17-Practicas_Responsive_Design/03-Aplicando_Responsive_a_Nuestra
 
 Para aplicar media query cuando trabajamos con `grid-areas` ver directorio `17-Practicas_Responsive_Design/04-Aplicando_Responsive_a_Nuestras_App_Google_con_Masonry_Layout`.
 
+Para aplicar media query usando SASS ver `18-SASS-CSS_con_Superpoderes/scss/mediaquery.scss`.
+
 ## Modo oscuro
 
 Ver directorio `16-Responsive_Design/04-Media_Query_Scheme_Para_Aplicar_Modo_Oscuro` para ver como trabajar con el tema del dispositivo.
