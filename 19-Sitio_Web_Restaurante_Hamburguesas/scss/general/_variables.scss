@@ -1,0 +1,18 @@
+//* VARIABLES 
+@use 'sass:color';
+
+$white: #FFF;
+$gris100: #DEDEDE;
+$gris200: #CCC;
+$gris300: #999;
+$gris400: #666;
+$gris600: #444;
+$gris700: #222;
+$black: #000;
+$color-primario: #FF7B00;
+// scale() es una función de SASS que permite asignar un color y darle un porcentaje de $lightness.
+//    Si ese valor es negativo, el color se oscurece.
+//    Si ese valor es positivo, el color se aclara.
+// scale() también permite dar porcentajes de #saturation, $alpha...
+// Ver https: //sass-lang.com/documentation/modules/color/#scale
+$color-primario-dark: color.scale($color-primario, $lightness: 10%);

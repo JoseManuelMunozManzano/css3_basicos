@@ -1,0 +1,154 @@
+//* GENERALES
+// Estos estilos generales asignados a clases nos sirven a manera de framework, son reutilizables.
+// Cuando quiera usarlos, solo tengo que indicar el nombre de estas clases en mi HTML.
+// Así es como trabaja Bootstrap y Tailwind.
+
+// Para el uso de @use ver https: //sass-lang.com/documentation/at-rules/use/
+@use 'sass:color';
+@use "variables" as *;
+
+body {
+  font-family: "Poppins", sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+header,
+section {
+  padding: 100px 0;
+}
+
+.box-center {
+  width: 80%;
+  margin: auto;
+}
+
+h1.tprincipal {
+  font-family: "Merienda";
+  color: $white;
+  // Tamaño de fuente responsive
+  font-size: 12vmin;
+  font-weight: bold;
+}
+
+h1 {
+  color: $white;
+  font-size: 10vmin;
+  font-weight: 600;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+h2.tsecundario {
+  font-size: 4vmin;
+  text-align: center;
+  color: $white;
+  letter-spacing: 6px;
+  font-weight: 400;
+}
+
+h3 {
+  margin-bottom: 70px;
+  text-transform: uppercase;
+  font-size: 35px;
+  color: $gris700;
+}
+
+h4 {
+  color: $gris600;
+  font-weight: 400;
+  font-size: 30px;
+  text-transform: uppercase;
+}
+
+h5 {
+  font-size: 20px;
+  font-weight: 400;
+}
+
+//* Paleta de colores de texto gris
+@function colorArithmetic($color, $scale: 1, $offset: 0) {
+  $red: (
+    color.channel($color, "red", $space: rgb) * $scale) + $offset;
+  $green: (
+    color.channel($color, "green", $space: rgb) * $scale) + $offset;
+  $blue: (
+    color.channel($color, "blue", $space: rgb) * $scale) + $offset;
+  @return rgb($red, $green, $blue)
+}
+
+@for $i from 1 through 8 {
+  .text-solid#{$i} {
+    color: colorArithmetic($gris700, $i
+    );
+}
+}
+
+// Esto sería otra forma de hacerlo, pero no sale exactamente igual
+// @for $i from 1 through 8 {
+//   .text-solid#{$i} {
+//     color: color.scale($gris700, $lightness: $i * 10%);
+//   }
+// }
+
+//* Paleta de background de color gris
+@for $i from 1 through 8 {
+  .bg-solid#{$i} {
+    background: colorArithmetic($gris700, $i);
+  }
+}
+
+.text-primario {
+  color: $color-primario;
+}
+
+.bg-primario {
+  background: $color-primario;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-lite {
+  font-family: "Merienda";
+}
+
+.border {
+  border: 1px solid $gris200;
+}
+
+.rounded {
+  border-radius: 5px;
+}
+
+.rounded-semi {
+  border-radius: 20px;
+}
+
+.rounded-full {
+  border-radius: 50%;
+}
+
+.line-space {
+  line-height: 40px;
+}
+
+.margin-bottom {
+  margin-bottom: 30px;
+}
+
+.margin-top {
+  margin-top: 30px;
+}
+
+.margin-y {
+  margin: 30px 0;
+}
+
+.margin-x {
+  margin: 0 30px;
+}
