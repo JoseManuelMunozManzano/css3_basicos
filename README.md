@@ -75,12 +75,12 @@ Para crear un entorno de desarrollo con SASS, necesitamos tener instalado `Node.
 - Creamos un proyecto, por ejemplo `18-SASS-CSS_con_Superpoderes`
 - Creamos los siguientes directorios:
   - css
-    - Creamos el archivo `styles.css`
+    - Creamos el archivo `styles.css` (ESTO NO ES NECESARIO YA QUE LO CREARA AUTOMATICAMENTE)
   - scss
     - Creamos el archivo `styles.scss`
 - Inicializamos el proyecto con `npm init -y`
   - Con esto se crea el archivo `package.json`
-- Instalamos SASS usando el mandato `npm i sass`
+- Instalamos SASS localmente usando el mandato `npm i sass`
   - Se crea el directorio `node_modules` con las dependencias de SASS
 - Creamos el archivo html `index.html` y le vinculamos el archivo `styles.css` (el de la carpeta css)
 - Empezamos a trabajar con nuestro archivo SASS `styles.scss` (el de la carpeta scss)
@@ -93,6 +93,12 @@ Para crear un entorno de desarrollo con SASS, necesitamos tener instalado `Node.
 También existe una extensión para VSCode que se llama `Live Sass Compiler` y compila automáticamente el archivo SASS a CSS sin necesidad de instalar `NodeJs` ni `npm` ni `Sass`. La instalo y aparece en la parte inferior derecha de VSCode el texto `Watch Sass`. Pulsando en el, va vigilando los cambios. Se suele usar esta opción para proyectos personales, más pequeños.
 
 Prefiero usar los comandos.
+
+## SASS - Instalación de Font Awesome usando npm
+
+Ejecutamos el comando `npm i @fortawesome/fontawesome-free` para instalar en el directorio `node_modules` la dependencia de Font Awesome.
+
+Ver `https://docs.fontawesome.com/web/setup/packages#all-the-things`.
 
 ## SASS - Uso de módulos
 
