@@ -1,4 +1,5 @@
 @use "../general/mixin" as m;
+@use "../general/componentes" as *;
 
 .header {
   position: relative;
@@ -11,13 +12,7 @@
   clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%);
 
   &::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba($color: #000000, $alpha: 0.5);
+    @extend .overlay;
   }
 
   // A todos los elementos que están en el header
