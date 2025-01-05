@@ -1,0 +1,33 @@
+//* Flexbox
+@mixin dflex($justify, $align, $flow) {
+  display: flex;
+  justify-content: $justify;
+  align-items: $align;
+  // Recordar que flex-flow englobaba tanto la dirección como el wrap.
+  flex-flow: $flow;
+}
+
+//* Grid
+@mixin dgrid($column, $row, $gap) {
+  display: grid;
+  grid-template-columns: $columns;
+  grid-template-rows: $row;
+  gap: $gap;
+}
+
+//* Botones
+@mixin btn($bg, $text) {
+  background: $bg;
+  color: $text;
+}
+
+//* Iconos
+// Damos tamaño al contenedor de los iconos y a cada uno de los enlaces.
+@mixin icons($container, $width, $height) {
+  width: $container;
+
+  a {
+    width: $width;
+    height: $height;
+  }
+}
