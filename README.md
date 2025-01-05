@@ -129,6 +129,8 @@ De esta manera, nos podemos organizar mejor.
 Aunque SASS ya no permite multiplicar colores, si que se puede hacer este truco para ello. Ver proyecto `18-SASS-CSS_con_Superpoderes/scss/bucles.scss`, donde se utiliza una función que cambia el valor del rojo, verde y azul:
 
 ```
+@use 'sass:color';
+
 @function colorArithmetic($color, $scale: 1, $offset: 0) {
   $red: (
     color.channel($color, "red", $space: rgb) * $scale) + $offset;
