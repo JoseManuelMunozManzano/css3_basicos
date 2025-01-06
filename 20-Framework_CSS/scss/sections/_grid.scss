@@ -1,0 +1,39 @@
+//* GRID
+
+@use '../global/mediaquery' as *;
+
+.grid {
+  display: grid;
+  grid-template-rows: auto;
+  gap: 20px;
+}
+
+// Creamos de forma dinámina nuestro esquema de grid.
+// Indicando through vamos de 1 al 12.
+// Indicando to vamos de 1 al 11.
+@for $i from 1 through 12 {
+  .col-#{$i} {grid-template-columns: repeat($i, 1fr);}
+  .span-#{$i} {grid-column: span $i;}
+}
+
+//* MEDIA QUERY 
+@include desktop() {
+  @for $i from 1 through 12 {
+    .col-lg-#{$i} {grid-template-columns: repeat($i, 1fr);}
+    .span-lg-#{$i} {grid-column: span $i;}
+  }
+}
+
+@include tablets() {
+  @for $i from 1 through 12 {
+    .col-md-#{$i} {grid-template-columns: repeat($i, 1fr);}
+    .span-md-#{$i} {grid-column: span $i;}
+  }
+}
+
+@include phone() {
+  @for $i from 1 through 12 {
+    .col-sm-#{$i} {grid-template-columns: repeat($i, 1fr);}
+    .span-sm-#{$i} {grid-column: span $i;}
+  }
+}
