@@ -121,6 +121,7 @@ Para crear un entorno de desarrollo con SASS, necesitamos tener instalado `Node.
   - Seleccionando el archivo, pulsando el botón derecho del ratón, podremos seleccionar la opción `Minify the selected document and preserve the original`
   - O, viendo el código, pulsando el botón derecho del ratón, podremos seleccionar distintos `Minify` existentes
     - Es muy típico minificar el archivo `_normalize.scss` usando `Minify this document`
+  - Hay que minificar al terminar de crear el archivo CSS, ya que SASS no actualiza este archivo minificado. Si cambiamos el SASS hay que volver a crear el archivo minificado
 
 También existe una extensión para VSCode que se llama `Live Sass Compiler` y compila automáticamente el archivo SASS a CSS sin necesidad de instalar `NodeJs` ni `npm` ni `Sass`. La instalo y aparece en la parte inferior derecha de VSCode el texto `Watch Sass`. Pulsando en el, va vigilando los cambios. Se suele usar esta opción para proyectos personales, más pequeños.
 

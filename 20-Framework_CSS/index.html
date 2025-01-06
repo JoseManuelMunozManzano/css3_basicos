@@ -4,9 +4,65 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Framework CSS</title>
-  <link rel="stylesheet" href="css/framework.css">
+  <link rel="stylesheet" href="css/framework-min.css">
 </head>
-<body>
-  
+<body class="bg-gray-200">
+
+  <header>
+    <nav class="nav bg-primary">
+      <div class="container">
+        <a href="#" class="text-white">Inicio</a>
+        <a href="#" class="text-white">Blog</a>
+        <a href="#" class="text-white">Acerca de</a>
+        <a href="#" class="text-white">Contacto</a>
+      </div>
+    </nav>
+  </header>
+
+  <div class="container card text-center">
+    <h1 class="display-1 m-0">Lorem ipsum dolor sit amet.</h1>
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Illo ab porro quisquam ipsam deleniti nesciunt magnam atque placeat? Dolor, perferendis voluptas quas rem dignissimos voluptatem! Delectus rem tempore sunt quasi.</p>
+    <button class="btn btn-primary">Boton primario</button>
+    <button class="btn btn-secondary">Boton secundario</button>
+  </div>
+
+  <div class="container">
+    <div class="grid col-3 col-lg-3 col-md-2 col-sm-1">
+      <div class="card">Card 1</div>
+      <div class="card">Card 2</div>
+      <div class="card">Card 3</div>
+      <div class="card">Card 4</div>
+      <div class="card">Card 5</div>
+      <div class="card">Card 6</div>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="grid col-3">
+      <div class="span-2 span-md-3">
+        <div class="card mb-2">
+          <h1>Lorem ipsum dolor sit amet.</h1>
+          <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dicta mollitia adipisci nisi quasi. Ab natus eveniet placeat sequi, non cupiditate minus omnis impedit ullam saepe soluta ratione esse minima dignissimos.</p>
+        </div>
+
+        <div class="card">
+          <h1>Lorem ipsum dolor sit amet.</h1>
+          <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dicta mollitia adipisci nisi quasi. Ab natus eveniet
+            placeat sequi, non cupiditate minus omnis impedit ullam saepe soluta ratione esse minima dignissimos.</p>
+        </div>
+      </div>
+
+      <div class="card span-1 span-md-3">
+        <h3 class="mb-2">Registrate</h3>
+        <form action="">
+          <input type="text" placeholder="Correo electronico">
+          <input type="text" placeholder="Contraseña">
+          <button class="btn btn-primary">Suscribete</button>
+          <button class="btn btn-success">Registrate</button>
+        </form>
+      </div>
+    </div>
+  </div>
+
 </body>
 </html>
