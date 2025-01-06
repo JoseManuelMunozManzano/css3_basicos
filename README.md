@@ -26,6 +26,14 @@ Ver los archivos:
 
 `12-CSS_Grid_Estructuras_Avanzadas/07-CSS_Trick-Como_Centrar_un_Div`.
 
+## Documentación para entender el posicionamiento en CSS
+
+Ver la siguiente documentación: `https://dev.to/lupitacode/guia-completa-y-practica-sobre-posicionamiento-css-fundamentos-17c`.
+
+## Documentación para entender Layout Algorithms
+
+Ver la siguiente documentación: `https://www.joshwcomeau.com/css/understanding-layout-algorithms/`.
+
 ## Practicar Flexbox
 
 https://flexboxfroggy.com/#es
@@ -78,6 +86,16 @@ Para aplicar media query usando SASS ver `18-SASS-CSS_con_Superpoderes/scss/medi
 
 Ver directorio `16-Responsive_Design/04-Media_Query_Scheme_Para_Aplicar_Modo_Oscuro` para ver como trabajar con el tema del dispositivo.
 
+## Resetear estilos
+
+Reseteamos estilos para que nuestra página web sea vea exactamente igual en cualquier navegador.
+
+Para ello, podemos crear el fichero `normalize.css` e informarlo con los estilos que aparecen al pulsar el botón Download de este repositorio: `https://necolas.github.io/normalize.css/`.
+
+Lo único malo de este reseteo es que no utiliza `box-sizing: border-box;`. Para solucionar este problema, añadimos al final de nuestro archivo `normalize.css` lo siguiente: `*,*::after,*::before {box-sizing: border-box;}`.
+
+Otra opción para resetear nuestros elementos es seguir las recomendaciones de este post: `https://www.joshwcomeau.com/css/custom-css-reset/`
+
 ## SASS - Creación de Entorno
 
 Para crear un entorno de desarrollo con SASS, necesitamos tener instalado `Node.js` y `npm`.
@@ -100,7 +118,9 @@ Para crear un entorno de desarrollo con SASS, necesitamos tener instalado `Node.
   - Se crea un archivo `css/styles.css.map` que es un mapa de nuestro archivo SASS. No hay que hacerle caso
   - Se genera la hoja de estilos en nuestro archivo `css/styles.css` que estaba vacío
 - Solo si queremos minificar, instalaremos en VSCode la extensión `MiniyAll`
-  - Seleccionando el archivo, pulsando el botón derecho, podremos seleccionar la opción `Minify the selected document and preserve the original`
+  - Seleccionando el archivo, pulsando el botón derecho del ratón, podremos seleccionar la opción `Minify the selected document and preserve the original`
+  - O, viendo el código, pulsando el botón derecho del ratón, podremos seleccionar distintos `Minify` existentes
+    - Es muy típico minificar el archivo `_normalize.scss` usando `Minify this document`
 
 También existe una extensión para VSCode que se llama `Live Sass Compiler` y compila automáticamente el archivo SASS a CSS sin necesidad de instalar `NodeJs` ni `npm` ni `Sass`. La instalo y aparece en la parte inferior derecha de VSCode el texto `Watch Sass`. Pulsando en el, va vigilando los cambios. Se suele usar esta opción para proyectos personales, más pequeños.
 
