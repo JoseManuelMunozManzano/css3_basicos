@@ -1,0 +1,69 @@
+//* MEDIA QUERY
+$desktop: 1100px;
+$tablet: 790px;
+$phone: 550px;
+
+@mixin mq($width) {
+  @media screen and (max-width: $width) {
+    // Hace referencia (importa) los estilos especificados.
+    @content;
+  }
+}
+
+//* DESKTOP
+// Se usa tanto el !important porque en styles.scss este archivo va antes de los estilos de
+// los layout, por lo que mandan los estilos de layout.
+// Es decir, sin !important, estos estilos no se van a aplicar.
+//
+// También se podría indicar el archivo mediaq.scss al final del archivo styles.scss.
+// En ese caso no haría falta el !important.
+
+@include mq($desktop) {
+  // ABOUT
+  .about {
+    &__container {
+      .content {
+        order: 1;
+        flex: 0 0 100% !important;
+        margin: 50px 0;
+      }
+
+      .container_image {
+        order: 0;
+        flex: 0 0 100% !important;
+        margin: 50px 0;
+      }
+    }
+  }
+
+  // ICONS
+  .icons {
+    width: 100% !important;
+  }
+}
+
+
+//* TABLET
+@include mq($tablet) {
+  // CARD
+  .card {
+    width: 45% !important;
+  }
+}
+
+
+//* PHONE
+@include mq($phone) {
+
+  // CARD
+  .card {
+    width: 100% !important;
+  }
+
+  // FOOTER
+  .footer {
+    &__container {
+      grid-template-columns: 1fr !important;
+    }
+  }
+}
