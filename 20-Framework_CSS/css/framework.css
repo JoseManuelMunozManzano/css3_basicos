@@ -367,4 +367,84 @@ p {
   font-size: 44px;
 }
 
+.bg-primary {
+  color: #0D6EFD;
+}
+
+.bg-secondary {
+  color: #6C757D;
+}
+
+.bg-success {
+  color: #198754;
+}
+
+.bg-info {
+  color: #0DCAF0;
+}
+
+.bg-warning {
+  color: #FFC107;
+}
+
+.bg-danger {
+  color: #DC3545;
+}
+
+.bg-light {
+  color: #F8F9FA;
+}
+
+.bg-dark {
+  color: #212529;
+}
+
+.bg-white {
+  color: #FFF;
+}
+
+.bg-black {
+  color: #000;
+}
+
+.bg-indigo {
+  color: #6610f2;
+}
+
+.bg-gray-100 {
+  color: #f8f9fa;
+}
+
+.bg-gray-200 {
+  color: #e9ecef;
+}
+
+.bg-gray-300 {
+  color: #dee2e6;
+}
+
+.bg-gray-400 {
+  color: #ced4da;
+}
+
+.bg-gray-500 {
+  color: #adb5bd;
+}
+
+.bg-gray-600 {
+  color: #6c757d;
+}
+
+.bg-gray-700 {
+  color: #495057;
+}
+
+.bg-gray-800 {
+  color: #343a40;
+}
+
+.bg-gray-900 {
+  color: #212529;
+}
+
 /*# sourceMappingURL=framework.css.map */
