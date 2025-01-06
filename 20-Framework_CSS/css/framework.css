@@ -163,4 +163,27 @@ template {
   box-sizing: border-box;
 }
 
+body {
+  font-family: "Open Sans", sans-serif;
+  font-size: 18px;
+}
+
+img {
+  width: 100%;
+  object-fit: cover;
+  object-position: center center;
+}
+
+.container {
+  max-width: 90%;
+  width: 1200px;
+  margin: 20px auto;
+  overflow: hidden;
+}
+
+.container-full {
+  width: 100%;
+  padding: 0 40px;
+}
+
 /*# sourceMappingURL=framework.css.map */

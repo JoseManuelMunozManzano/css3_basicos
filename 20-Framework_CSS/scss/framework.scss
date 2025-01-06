@@ -1,5 +1,8 @@
-//* GLOBALES
+//* GLOBALS
 @use 'global/fonts';
 @use 'global/normalize';
 @use 'global/variables';
 @use 'global/mediaquery';
+
+//* SECTIONS
+@use 'sections/generales'; 

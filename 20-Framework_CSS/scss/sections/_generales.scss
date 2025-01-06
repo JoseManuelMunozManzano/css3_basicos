@@ -1,0 +1,28 @@
+//* GENERALES
+
+@use '../global/variables' as *;
+
+body {
+  font-family: $font1;
+  // El texto base de mi archivo van a ser 18px.
+  // Luego en los distintos elementos podré usar em o rem...
+  font-size: 18px;
+}
+
+img {
+  width: 100%;
+  object-fit: cover;
+  object-position: center center;
+}
+
+.container {
+  max-width: 90%;
+  width: $max-container;
+  margin: 20px auto;
+  overflow: hidden;
+}
+
+.container-full {
+  width: 100%;
+  padding: 0 40px;
+}
