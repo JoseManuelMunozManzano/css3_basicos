@@ -2328,4 +2328,154 @@ p {
   transition: all 0.1s;
 }
 
+.card {
+  padding: 40px;
+  background: #FFF;
+  border-radius: 5px;
+  box-shadow: 0 0 30px rgba(221, 221, 221, 0.3);
+}
+
+.nav {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.nav .container {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 auto;
+}
+
+.nav a {
+  text-decoration: none;
+  padding: 15px 25px;
+}
+
+form * {
+  font-family: "Open Sans", sans-serif;
+}
+
+form input {
+  padding: 10px 15px;
+  border: 1px solid #ced4da;
+  border-radius: 4px;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+form input:focus {
+  border: 1px solid #0D6EFD;
+  outline: none;
+}
+
+.btn {
+  border: none;
+  cursor: pointer;
+  display: inline-block;
+  padding: 10px 15px;
+  border-radius: 3px;
+  text-align: center;
+  line-height: 22px;
+  transition: all 0.3s;
+}
+
+.btn-primary {
+  background: #0D6EFD;
+  color: #FFF;
+}
+
+.btn-primary:hover {
+  background: rgb(1.762295082, 87.2336065574, 213.237704918);
+}
+
+.btn-secondary {
+  background: #6C757D;
+  color: #FFF;
+}
+
+.btn-secondary:hover {
+  background: rgb(84.3605150215, 91.3905579399, 97.6394849785);
+}
+
+.btn-success {
+  background: #198754;
+  color: #FFF;
+}
+
+.btn-success:hover {
+  background: rgb(17.03125, 91.96875, 57.225);
+}
+
+.btn-info {
+  background: #0DCAF0;
+  color: #000;
+}
+
+.btn-info:hover {
+  background: rgb(10.3794466403, 161.2806324111, 191.6205533597);
+}
+
+.btn-warning {
+  background: #FFC107;
+  color: #000;
+}
+
+.btn-warning:hover {
+  background: rgb(211, 158.25, 0);
+}
+
+.btn-danger {
+  background: #DC3545;
+  color: #FFF;
+}
+
+.btn-danger:hover {
+  background: rgb(189.2151898734, 32.7848101266, 47.7721518987);
+}
+
+.btn-light {
+  background: #F8F9FA;
+  color: #000;
+}
+
+.btn-light:hover {
+  background: rgb(218.25, 223.5, 228.75);
+}
+
+.btn-dark {
+  background: #212529;
+  color: #FFF;
+}
+
+.btn-dark:hover {
+  background: rgb(10.2567567568, 11.5, 12.7432432432);
+}
+
+.btn-white {
+  background: #FFF;
+  color: #FFF;
+}
+
+.btn-white:hover {
+  background: rgb(229.5, 229.5, 229.5);
+}
+
+.btn-black {
+  background: #000;
+  color: #FFF;
+}
+
+.btn-black:hover {
+  background: hsl(0, 0%, -10%);
+}
+
+.btn-indigo {
+  background: #6610f2;
+  color: #FFF;
+}
+
+.btn-indigo:hover {
+  background: rgb(81.3214285714, 10.6785714286, 196.3214285714);
+}
+
 /*# sourceMappingURL=framework.css.map */
