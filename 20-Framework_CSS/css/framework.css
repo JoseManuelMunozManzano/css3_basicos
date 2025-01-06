@@ -186,4 +186,185 @@ img {
   padding: 0 40px;
 }
 
+/*
+  Warning: You probably don't mean to use the color value indigo in interpolation here.
+  It may end up represented as indigo,
+  which will likely produce invalid CSS. Always quote color names when using them as strings or map keys (for example, "indigo"). If you really want to use the color value here,
+  use '"" + $nombre' .
+*/
+.text-primary {
+  color: #0D6EFD;
+}
+
+.text-primary:hover {
+  color: rgb(1.3442622951, 66.5409836066, 162.6557377049);
+}
+
+.text-secondary {
+  color: #6C757D;
+}
+
+.text-secondary:hover {
+  color: rgb(60.7210300429, 65.7811158798, 70.2789699571);
+}
+
+.text-success {
+  color: #198754;
+}
+
+.text-success:hover {
+  color: rgb(9.0625, 48.9375, 30.45);
+}
+
+.text-info {
+  color: #0DCAF0;
+}
+
+.text-info:hover {
+  color: rgb(7.7588932806, 120.5612648221, 143.2411067194);
+}
+
+.text-warning {
+  color: #FFC107;
+}
+
+.text-warning:hover {
+  color: #a07800;
+}
+
+.text-danger {
+  color: #DC3545;
+}
+
+.text-danger:hover {
+  color: rgb(145.746835443, 25.253164557, 36.7974683544);
+}
+
+.text-light {
+  color: #F8F9FA;
+}
+
+.text-light:hover {
+  color: rgb(188.5, 198, 207.5);
+}
+
+.text-dark {
+  color: #212529;
+}
+
+.text-dark:hover {
+  color: hsl(210, 10.8108108108%, -5.4901960784%);
+}
+
+.text-white {
+  color: #FFF;
+}
+
+.text-white:hover {
+  color: #cccccc;
+}
+
+.text-black {
+  color: #000;
+}
+
+.text-black:hover {
+  color: hsl(0, 0%, -20%);
+}
+
+.text-indigo {
+  color: #6610f2;
+}
+
+.text-indigo:hover {
+  color: rgb(61.2857142857, 8.0476190476, 147.9523809524);
+}
+
+.text-gray-100 {
+  color: #f8f9fa;
+}
+
+.text-gray-200 {
+  color: #e9ecef;
+}
+
+.text-gray-300 {
+  color: #dee2e6;
+}
+
+.text-gray-400 {
+  color: #ced4da;
+}
+
+.text-gray-500 {
+  color: #adb5bd;
+}
+
+.text-gray-600 {
+  color: #6c757d;
+}
+
+.text-gray-700 {
+  color: #495057;
+}
+
+.text-gray-800 {
+  color: #343a40;
+}
+
+.text-gray-900 {
+  color: #212529;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+}
+
+p {
+  line-height: 27px;
+}
+
+.fs-xs {
+  font-size: 8px;
+}
+
+.fs-s {
+  font-size: 12px;
+}
+
+.fs-normal {
+  font-size: 16px;
+}
+
+.fs-m {
+  font-size: 18px;
+}
+
+.fs-lg {
+  font-size: 24px;
+}
+
+.fs-xl {
+  font-size: 40px;
+}
+
+.fs-xxl {
+  font-size: 60px;
+}
+
+.display-1 {
+  font-weight: 700;
+  font-size: 64px;
+}
+
+.display-2 {
+  font-weight: 700;
+  font-size: 54px;
+}
+
+.display-3 {
+  font-weight: 700;
+  font-size: 44px;
+}
+
 /*# sourceMappingURL=framework.css.map */
