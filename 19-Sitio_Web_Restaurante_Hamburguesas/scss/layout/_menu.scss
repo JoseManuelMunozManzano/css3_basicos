@@ -1,0 +1,7 @@
+@use '../general/mixin' as m;
+
+.menu {
+  &__container {
+    @include m.dflex(space-between, center, row wrap);
+  }
+}
