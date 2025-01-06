@@ -1,0 +1,29 @@
+@use "../general/mixin" as m;
+
+.footer {
+  &__container {
+    @include m.dgrid(1fr 1fr, auto, 20px);
+    padding: 50px 0;
+    color: #FFF;
+
+    .info {
+      .icons {
+        @include m.icons(60%, 50px, 50px);
+      }
+    }
+
+    .contact {
+      .icons {
+        @include m.icons(40%, 50px, 50px);
+
+        a {
+          background: transparent;
+
+          &:hover {
+            background: transparent;
+          }
+        }
+      }
+    }
+  }
+}

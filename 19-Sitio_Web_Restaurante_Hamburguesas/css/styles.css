@@ -401,4 +401,33 @@ nav a:hover {
   flex-flow: row wrap;
 }
 
+.footer__container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto;
+  gap: 20px;
+  padding: 50px 0;
+  color: #FFF;
+}
+.footer__container .info .icons {
+  width: 60%;
+}
+.footer__container .info .icons a {
+  width: 50px;
+  height: 50px;
+}
+.footer__container .contact .icons {
+  width: 40%;
+}
+.footer__container .contact .icons a {
+  width: 50px;
+  height: 50px;
+}
+.footer__container .contact .icons a {
+  background: transparent;
+}
+.footer__container .contact .icons a:hover {
+  background: transparent;
+}
+
 /*# sourceMappingURL=styles.css.map */
